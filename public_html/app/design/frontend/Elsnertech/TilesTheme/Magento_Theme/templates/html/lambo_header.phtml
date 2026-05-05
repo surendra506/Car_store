@@ -1,0 +1,64 @@
+<?php
+declare(strict_types=1);
+
+/** @var \Magento\Framework\View\Element\Template $block */
+$layout = $block->getLayout();
+
+$logo = $layout->getBlock('logo');
+$search = $layout->getBlock('top.search');
+$minicart = $layout->getBlock('minicart');
+?>
+
+<header class="lambo-header" data-lambo-header>
+    <div class="lambo-header__inner">
+        <div class="lambo-header__left">
+            <button class="lambo-header__menu" type="button" aria-controls="lambo-nav" aria-expanded="false">
+                <span class="lambo-burger" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                </span>
+                <span class="lambo-header__menu-text">MENU</span>
+            </button>
+        </div>
+
+        <div class="lambo-header__center">
+            <?php if ($logo): ?>
+                <?php
+                $logoAlt = method_exists($logo, 'getLogoAlt') ? (string) $logo->getLogoAlt() : 'Logo';
+                $logoHref = method_exists($logo, 'getHomePageUrl') ? (string) $logo->getHomePageUrl() : (string) $block->getUrl('');
+                $logoSrc = $block->getViewFileUrl('images/logo_header_01.svg');
+                ?>
+                <a class="logo" href="<?= $block->escapeUrl($logoHref) ?>" title="<?= $block->escapeHtmlAttr($logoAlt) ?>" aria-label="<?= $block->escapeHtmlAttr($logoAlt) ?>">
+                    <img src="<?= $block->escapeUrl($logoSrc) ?>" alt="<?= $block->escapeHtmlAttr($logoAlt) ?>"/>
+                </a>
+            <?php endif; ?>
+        </div>
+
+        <div class="lambo-header__right">
+            <?php if ($search): ?>
+                <div class="lambo-header__icon lambo-header__search">
+                    <?= /* @noEscape */ $search->toHtml() ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if ($minicart): ?>
+                <div class="lambo-header__icon lambo-header__icon--cart">
+                    <?= /* @noEscape */ $minicart->toHtml() ?>
+                </div>
+            <?php else: ?>
+                <a class="lambo-header__icon lambo-header__icon--cart" href="<?= $block->escapeUrl($block->getUrl('checkout/cart')) ?>" aria-label="Cart">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M6.5 6h15l-1.5 8.5H8.2L6.5 6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                        <path d="M6.5 6 5.8 3.5H3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M9 20a1.4 1.4 0 1 0 0-2.8A1.4 1.4 0 0 0 9 20ZM18 20a1.4 1.4 0 1 0 0-2.8A1.4 1.4 0 0 0 18 20Z" fill="currentColor"/>
+                    </svg>
+                </a>
+            <?php endif; ?>
+        </div>
+    </div>
+
+    <nav id="lambo-nav" class="lambo-nav" hidden>
+        <div class="lambo-nav__inner">
+            <?= $block->getChildHtml('catalog.topnav'); ?>
+        </div>
+    </nav>
+</header>

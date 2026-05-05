@@ -1,0 +1,3 @@
+require.config({"config": {
+        "jsbuild":{"Magento_PaymentServicesPaypal/js/view/shipping-mixin.js":"define(function () {\n    'use strict';\n\n    var mixin = {\n        /**\n         * When changing the shipping method store it within checkoutConfig to support PayPal app switch.\n         *\n         * @param {*} shippingMethod\n         */\n        selectShippingMethod: function (shippingMethod) {\n            this._super(shippingMethod);\n            window.checkoutConfig.selectedShippingMethod = shippingMethod;\n\n            return true;\n        },\n    };\n\n    return function (shipping) {\n        return shipping.extend(mixin);\n    };\n});\n"}
+}});

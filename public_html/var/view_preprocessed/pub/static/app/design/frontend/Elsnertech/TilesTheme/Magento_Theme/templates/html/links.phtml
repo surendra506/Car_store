@@ -1,0 +1,1 @@
+<ul class="footer links"><?php foreach ($block->getLinks() as $_link): ?> <li> <a href="<?= $block->escapeUrl($_link->getUrl()) ?>"><?= $block->escapeHtml($_link->getLabel()) ?></a></li> <?php endforeach; ?></ul>

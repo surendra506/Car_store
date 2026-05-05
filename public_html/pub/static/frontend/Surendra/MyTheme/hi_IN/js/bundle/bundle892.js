@@ -1,0 +1,3 @@
+require.config({"config": {
+        "jsbuild":{"Magento_Persistent/js/view/remember-me.js":"/**\n * Copyright 2024 Adobe\n * All Rights Reserved.\n */\n\ndefine(\n    [\n        'ko',\n        'uiComponent'\n    ],\n    function (ko, Component) {\n        'use strict';\n\n        let persistenceConfig = window.checkoutConfig.persistenceConfig;\n\n        return Component.extend({\n            defaults: {\n                template: 'Magento_Persistent/remember-me'\n            },\n            isRememberMeCheckboxVisible: ko.observable(persistenceConfig.isRememberMeCheckboxVisible),\n            isRememberMeCheckboxChecked: ko.observable(persistenceConfig.isRememberMeCheckboxChecked)\n        });\n    }\n);\n"}
+}});

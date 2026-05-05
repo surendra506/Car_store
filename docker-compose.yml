@@ -1,0 +1,49 @@
+services:
+
+  demo248_magento2:
+    container_name: demo248_magento2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
+    restart: always
+    volumes:
+      - ./public_html:/var/www/html
+    ports:
+      - "8001:80"
+
+  demo248_mariadb:
+    container_name: demo248_mariadb
+    image: mariadb:11.4
+    stdin_open: true
+    tty: true
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=demo248_user
+      - MYSQL_PASSWORD=demo248
+      - MYSQL_DATABASE=demo248_db
+    volumes:
+      - ./mariadb:/var/lib/mysql
+      
+    ports:
+      - "3001:3306"
+
+  demo248_opensearch:
+    container_name: demo248_opensearch
+    image: opensearchproject/opensearch:2.19.0
+    stdin_open: true
+    tty: true
+    restart: always
+    environment:
+      - cluster.name=opensearch
+      - node.name=opensearch
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "DISABLE_INSTALL_DEMO_CONFIG=true"
+      - "DISABLE_SECURITY_PLUGIN=true"
+      - "OPENSEARCH_JAVA_OPTS=-Xms2048m -Xmx2048m"
+    ports:
+      - "9001:9200"
+      - "9002:9600"

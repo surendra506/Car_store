@@ -1,0 +1,8 @@
+/vendor/
+/var/
+/generated/
+/pub/static/
+/pub/media/
+/mariadb/
+node_modules/
+.env

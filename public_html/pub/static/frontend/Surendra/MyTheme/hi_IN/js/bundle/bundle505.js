@@ -1,0 +1,3 @@
+require.config({"config": {
+        "jsbuild":{"Magento_PaymentServicesPaypal/js/helpers/get-allowed-locations.js":"define(['uiRegistry'], function (uiRegistry) {\n    'use strict';\n\n    /**\n     * Get the available list of countries as defined in configuration.\n     *\n     * @returns {Array}\n     */\n    return function () {\n        const countries = uiRegistry.get('checkoutProvider').get('dictionaries.country_id'),\n            allowedLocations = countries.map(({ value }) => value).filter((value) => value && value !== 'delimiter');\n\n        return allowedLocations;\n    };\n});\n"}
+}});

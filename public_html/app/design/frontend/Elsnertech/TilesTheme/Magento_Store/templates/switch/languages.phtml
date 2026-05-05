@@ -1,0 +1,46 @@
+<?php
+/**
+ * Premium minimal language/store-view switcher (dark theme).
+ *
+ * @var \Magento\Store\Block\Switcher $block
+ */
+?>
+
+<?php if (count($block->getStores()) > 1) : ?>
+    <?php $id = $block->getIdModifier() ? '-' . $block->getIdModifier() : '' ?>
+
+    <div class="switcher language switcher-language lt-switcher" data-lt-switcher id="switcher-language<?= $block->escapeHtmlAttr($id) ?>">
+        <button class="lt-switcher__btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lt-switcher__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path d="M6 22V3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M6 4h12l-2 4 2 4H6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+            </span>
+            <span class="lt-switcher__label"><?= $block->escapeHtml($block->getStoreName()) ?></span>
+            <span class="lt-switcher__chev" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+        </button>
+
+        <div class="lt-switcher__menu" role="listbox" aria-label="<?= $block->escapeHtmlAttr(__('Language')) ?>">
+            <?php foreach ($block->getStores() as $_store) : ?>
+                <?php
+                $isActive = (int)$_store->getId() === (int)$block->getCurrentStoreId();
+                ?>
+                <a class="lt-switcher__opt<?= $isActive ? ' is-active' : '' ?>"
+                   role="option"
+                   aria-selected="<?= $isActive ? 'true' : 'false' ?>"
+                   href="<?= $block->escapeUrl($block->getViewModel()->getTargetStoreRedirectUrl($_store)) ?>">
+                    <span class="lt-switcher__optText"><?= $block->escapeHtml($_store->getName()) ?></span>
+                    <?php if ($isActive) : ?>
+                        <span class="lt-switcher__pill">Active</span>
+                    <?php endif; ?>
+                </a>
+            <?php endforeach; ?>
+        </div>
+    </div>
+<?php endif; ?>
+

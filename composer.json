@@ -1,0 +1,10 @@
+{
+    "require": {
+        "mageplaza/module-smtp": "^4.7"
+    },
+    "repositories": [{
+        "name": "hyva-themes",
+        "type": "git",
+        "url": "https://gitlab.hyva.io/hyva-themes/magento2-default-theme.git"
+    }]
+}

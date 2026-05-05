@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Checkout page layout override.
+ *
+ * Core Magento uses the "empty" handle here, which intentionally removes the
+ * standard header navigation and footer. This theme keeps the regular 1column
+ * layout so navbar/footer remain visible on checkout.
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <update handle="1column"/>
+</layout>
+

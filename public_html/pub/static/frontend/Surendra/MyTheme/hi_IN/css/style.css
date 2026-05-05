@@ -1,0 +1,5190 @@
+/* ===============================
+   GLOBAL FIX (REMOVE GREY SIDES)
+================================= */
+/* FORCE REMOVE GREY NAVBAR BACKGROUND */
+.nav-sections,
+.nav-sections .navigation,
+.nav-sections-item-content,
+.navigation,
+.navigation ul {
+    background: #fff !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* REMOVE INNER GREY BOX */
+.nav-sections .navigation {
+    background-color: transparent !important;
+}
+
+/* REMOVE DEFAULT MAGENTO STRIP */
+.nav-sections-item-content {
+    background: #fff !important;
+}
+
+/* REMOVE ANY EXTRA PADDING/BOX */
+.nav-sections-item-content>* {
+    background: transparent !important;
+}
+
+html,
+body,
+.page-wrapper,
+.page-main,
+.columns,
+.page-header,
+.header.panel,
+.header.content {
+    background: #fff !important;
+}
+
+/* FULL WIDTH */
+.page-wrapper {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.page-main,
+.header.content,
+.header.panel {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* REMOVE SIDE STRIPS */
+.page-wrapper>* {
+    background: #fff !important;
+}
+
+/* ===============================
+   HEADER LAYOUT (RAK STYLE)
+================================= */
+
+.header.panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 60px;
+    background: #fff !important;
+}
+
+.header.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+.logo img {
+    height: 80px;
+}
+
+/* ===============================
+   NAVBAR CENTER ALIGN
+================================= */
+
+.nav-sections {
+    display: flex !important;
+    justify-content: center;
+    flex: 1;
+    background: transparent !important;
+}
+
+/* REMOVE BOX BEHIND MENU */
+.nav-sections .navigation {
+    background: none !important;
+    padding: 0 !important;
+}
+
+/* MENU */
+.navigation {
+    display: flex !important;
+    gap: 45px;
+    margin: 0 auto !important;
+    font-weight: 500;
+
+}
+
+.navigation a {
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+/* HOVER */
+.navigation a:hover {
+    color: #c9a25d;
+}
+
+/* ACTIVE TAB */
+.navigation .level0.active>a {
+    border-bottom: 2px solid #c9a25d;
+    padding-bottom: 5px;
+}
+
+/* ===============================
+   DROPDOWN
+================================= */
+
+.navigation .level0 {
+    position: relative;
+}
+
+.navigation .level0>.submenu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 999;
+}
+
+/* FORCE HIDDEN */
+.navigation .submenu {
+    display: none;
+}
+
+/* ===============================
+   RIGHT SECTION
+================================= */
+
+.header.links,
+.block-search,
+.minicart-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* ===============================
+   SEARCH (RAK STYLE SIMPLIFIED)
+================================= */
+
+.block-search {
+    position: relative;
+}
+
+/* MAKE INPUT LOOK LIKE ICON */
+.block-search input {
+    width: 120px;
+    border-radius: 25px;
+    border: 1px solid #eee;
+    padding: 6px 12px 6px 30px;
+    background: #fff;
+}
+
+/* ICON */
+.block-search:before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* ===============================
+   CART
+================================= */
+
+.minicart-wrapper {
+    position: relative;
+}
+
+.minicart-wrapper .action.showcart:before {
+    content: "\e611";
+    font-family: 'luma-icons';
+    font-size: 18px;
+    color: #000;
+}
+
+.minicart-wrapper .counter.qty {
+    background: #d4a94f;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 50%;
+    padding: 2px 5px;
+    position: absolute;
+    top: -5px;
+    right: -8px;
+}
+
+/* ===============================
+   SIGN IN TEXT
+================================= */
+
+.header.links a,
+.header.links span {
+    color: #000 !important;
+    font-size: 13px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* ===============================
+   REPLACE TEXT WITH ICON
+================================= */
+
+/* hide text */
+.header.panel .header.links a {
+    font-size: 0 !important;
+}
+
+/* icon using emoji */
+.header.panel .header.links a:before {
+    content: "👤";
+    font-size: 18px;
+    color: #000;
+}
+
+/* REMOVE BULLETS */
+.header.links li {
+    list-style: none;
+}
+
+/* REMOVE DUPLICATE */
+.page-wrapper .header.links {
+    display: none !important;
+}
+
+.header.panel .header.links {
+    display: flex !important;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+/* ===============================
+   STORE VIEW SWITCHER (FINAL UI)
+================================= */
+
+.header.panel .switcher-language {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 18px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1000;
+}
+
+/* hide default label */
+.header.panel .switcher-language .switcher-label {
+    display: none;
+}
+
+/* trigger button */
+.header.panel .switcher-language .switcher-trigger {
+    padding: 0;
+    background: transparent !important;
+    border: 0 !important;
+    cursor: pointer;
+}
+
+/* remove arrow */
+.header.panel .switcher-language .switcher-trigger:after {
+    display: none !important;
+}
+
+/* main text */
+.header.panel .switcher-language .switcher-trigger strong span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #000;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 1;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #000;
+}
+
+/* add icon + text before */
+.header.panel .switcher-language .switcher-trigger strong span::before {
+    content: "🌐";
+    font-weight: 500;
+    margin-right: 6px;
+    border-bottom: none;
+}
+
+/* dropdown z-index fix */
+.header.panel .switcher-language .switcher-dropdown {
+    z-index: 1001;
+}
+
+/* ===============================
+   SAFETY FIX
+================================= */
+
+.layout-1column,
+.layout-2columns-left,
+.layout-3columns {
+    background: #fff !important;
+}
+
+/* ===============================
+   FINAL CLEANUP
+================================= */
+
+body {
+    overflow-x: hidden;
+}
+
+/* Store view code switcher (e.g. EN-IN) */
+.panel.header .switcher-language.switcher-language--compact .switcher-label {
+    display: none !important;
+}
+
+.panel.header .switcher-language.switcher-language--compact .switcher-trigger {
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.panel.header .switcher-language.switcher-language--compact .switcher-trigger strong span {
+    font-size: 13px !important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #000 !important;
+    text-transform: uppercase;
+    border-bottom: 2px solid #000;
+    padding-bottom: 2px;
+}
+
+/* Store switcher (Default Store View) in header: icon-only */
+.header.panel .switcher-store {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+    z-index: 1000;
+}
+
+.header.panel .switcher-store .switcher-label {
+    display: none !important;
+}
+
+.header.panel .switcher-store .switcher-trigger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: transparent !important;
+    border: none !important;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.header.panel .switcher-store .switcher-trigger:hover {
+    background: #f5f5f5;
+}
+
+.header.panel .switcher-store .switcher-trigger strong span {
+    font-size: 0 !important;
+}
+
+.header.panel .switcher-store .switcher-trigger strong span::before {
+    content: "🏬";
+    font-size: 18px;
+    color: #000;
+}
+
+.header.panel .switcher-store .switcher-dropdown {
+    z-index: 1001;
+}
+
+/* Header fit fix: keep right-side items (cart/account/store view) inside viewport */
+.panel.header {
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    justify-content: flex-start !important;
+}
+
+.panel.header .logo {
+    flex: 0 0 auto;
+    order: 10;
+}
+
+.panel.header .navigation {
+    flex: 1 1 auto;
+    min-width: 0;
+    order: 20;
+}
+
+.panel.header .block-search {
+    flex: 0 0 auto;
+    margin-left: auto !important;
+    order: 40;
+}
+
+.panel.header .minicart-wrapper,
+.panel.header .header.links,
+.panel.header .switcher-language {
+    flex: 0 0 auto;
+}
+
+.panel.header .minicart-wrapper {
+    order: 50;
+}
+
+.panel.header .header.links {
+    order: 60;
+}
+
+.panel.header .switcher-language {
+    order: 70;
+}
+
+@media (max-width: 1440px) {
+    .panel.header {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+}
+
+
+/* 🔥 FORCE SHIFT NAVBAR RIGHT */
+.header.panel {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    /* 🔥 yahi spacing control karega */
+}
+
+/* extra control */
+.navigation {
+    justify-content: flex-start !important;
+}
+
+
+/* ===============================
+   FINAL HEADER FIX (WORKING)
+================================= */
+
+/* Make full header flex row */
+.header.panel {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start !important;
+}
+
+/* LOGO FIX */
+.header.panel .logo {
+    flex: 0 0 auto;
+}
+
+
+/* RIGHT SECTION PUSH */
+.header.panel .block-search {
+    margin-left: auto !important;
+}
+
+/* ===============================
+   CATALOG (DARK PRODUCT LIST)
+   Applies to category + search
+================================= */
+
+body.catalog-category-view,
+body.catalogsearch-result-index,
+body.catalog-product-view {
+    background: #0b0c0f !important;
+    color: #e9e9ea;
+}
+
+body.catalog-category-view .page-wrapper,
+body.catalogsearch-result-index .page-wrapper,
+body.catalog-product-view .page-wrapper,
+body.catalog-category-view .page-main,
+body.catalogsearch-result-index .page-main,
+body.catalog-product-view .page-main,
+body.catalog-category-view .columns,
+body.catalogsearch-result-index .columns,
+body.catalog-product-view .columns,
+body.catalog-category-view .column.main,
+body.catalogsearch-result-index .column.main,
+body.catalog-product-view .column.main {
+    background: #0b0c0f !important;
+}
+
+body.catalog-category-view .breadcrumbs,
+body.catalogsearch-result-index .breadcrumbs,
+body.catalog-product-view .breadcrumbs {
+    background: transparent !important;
+    margin-top: 18px;
+    padding-top: 10px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 34px;
+    box-sizing: border-box;
+    /* full-bleed so it aligns with full-width hero/CTA block */
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    padding-right: 34px;
+}
+
+body.catalog-category-view .breadcrumbs a,
+body.catalogsearch-result-index .breadcrumbs a,
+body.catalog-product-view .breadcrumbs a,
+body.catalog-category-view .breadcrumbs strong,
+body.catalogsearch-result-index .breadcrumbs strong,
+body.catalog-product-view .breadcrumbs strong {
+    color: #cfcfd2 !important;
+}
+
+body.catalog-category-view .breadcrumbs .items,
+body.catalogsearch-result-index .breadcrumbs .items,
+body.catalog-product-view .breadcrumbs .items {
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 100%;
+    text-align: left;
+    gap: 8px;
+    max-width: none !important;
+}
+
+body.catalog-category-view .page-title-wrapper .page-title,
+body.catalogsearch-result-index .page-title-wrapper .page-title,
+body.catalog-product-view .page-title-wrapper .page-title {
+    color: #ffffff !important;
+}
+
+/* Give some breathing room under the navbar on catalog/search/product */
+body.catalog-category-view .page-main,
+body.catalogsearch-result-index .page-main,
+body.catalog-product-view .page-main {
+    padding-top: 18px !important;
+}
+
+/* Make the top CMS/slider block full width (full-bleed) */
+body.catalog-category-view .category-view .category-cms,
+body.catalog-category-view .category-view .category-description,
+body.catalog-category-view .category-view .category-cms .block-static-block,
+body.catalog-category-view .category-view .category-cms .block,
+body.catalog-category-view .category-view .category-description .block {
+    max-width: none !important;
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow: visible !important; /* prevent CTA/buttons clipping */
+}
+
+/* Let slider/content span full width inside the full-bleed section */
+body.catalog-category-view .category-view .category-cms > *,
+body.catalog-category-view .category-view .category-description > * {
+    max-width: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow: visible !important; /* prevent CTA/buttons clipping */
+}
+
+/* Extra breathing room so bottom edge doesn't cut rounded buttons */
+body.catalog-category-view .category-view .category-cms,
+body.catalog-category-view .category-view .category-description {
+    padding-bottom: 24px !important;
+}
+
+/* Gap between hero CTA button and product slider/grid inside the top CMS block */
+body.catalog-category-view .category-view .category-cms .action.primary,
+body.catalog-category-view .category-view .category-cms a.action.primary,
+body.catalog-category-view .category-view .category-description .action.primary,
+body.catalog-category-view .category-view .category-description a.action.primary {
+    margin-bottom: 50px !important;
+    display: inline-block;
+}
+
+/* If the slider starts immediately after the CTA, push it down a bit */
+body.catalog-category-view .category-view .category-cms .owl-carousel,
+body.catalog-category-view .category-view .category-cms .slick-slider,
+body.catalog-category-view .category-view .category-cms .swiper,
+body.catalog-category-view .category-view .category-cms [class*="slider"],
+body.catalog-category-view .category-view .category-description .owl-carousel,
+body.catalog-category-view .category-view .category-description .slick-slider,
+body.catalog-category-view .category-view .category-description .swiper,
+body.catalog-category-view .category-view .category-description [class*="slider"] {
+    margin-top: 25px !important;
+}
+
+/* Prevent left/right clipping of headings/buttons inside the full-bleed block */
+body.catalog-category-view .category-view .category-cms,
+body.catalog-category-view .category-view .category-description {
+    padding-left: 34px !important;
+    padding-right: 34px !important;
+    box-sizing: border-box;
+}
+
+/* Keep common sliders/carousels truly edge-to-edge inside padded full-bleed block */
+body.catalog-category-view .category-view .category-cms .owl-carousel,
+body.catalog-category-view .category-view .category-cms .slick-slider,
+body.catalog-category-view .category-view .category-cms .swiper,
+body.catalog-category-view .category-view .category-cms [class*="slider"],
+body.catalog-category-view .category-view .category-description .owl-carousel,
+body.catalog-category-view .category-view .category-description .slick-slider,
+body.catalog-category-view .category-view .category-description .swiper,
+body.catalog-category-view .category-view .category-description [class*="slider"] {
+    width: calc(100% + 68px) !important;
+    margin-left: -34px !important;
+    margin-right: -34px !important;
+}
+
+
+/* Category "top block" (CMS/description/widgets) */
+body.catalog-category-view .category-view,
+body.catalogsearch-result-index .search.results,
+body.catalog-category-view .category-cms,
+body.catalog-category-view .category-description,
+body.catalog-category-view .category-cms .block,
+body.catalog-category-view .category-description .block,
+body.catalog-category-view .category-view .widget,
+body.catalog-category-view .category-view [class*="block"] {
+    background: transparent !important;
+    color: #e9e9ea;
+}
+
+body.catalog-category-view .category-view a,
+body.catalogsearch-result-index .search.results a {
+    color: #d6a03c;
+}
+
+body.catalog-category-view .category-view a:hover,
+body.catalogsearch-result-index .search.results a:hover {
+    color: #e1b255;
+}
+
+/* Toolbar (sort, limiter, pager) */
+body.catalog-category-view .toolbar,
+body.catalogsearch-result-index .toolbar {
+    background: transparent !important;
+    color: #e9e9ea;
+}
+
+body.catalog-category-view .toolbar select,
+body.catalogsearch-result-index .toolbar select,
+body.catalog-category-view .toolbar .control input,
+body.catalogsearch-result-index .toolbar .control input {
+    background: #14161b !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    color: #e9e9ea !important;
+    border-radius: 10px;
+}
+
+body.catalog-category-view .toolbar a,
+body.catalogsearch-result-index .toolbar a {
+    color: #cfcfd2 !important;
+}
+
+/* Product grid layout */
+body.catalog-category-view .products.wrapper.grid .product-items,
+body.catalogsearch-result-index .products.wrapper.grid .product-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 28px;
+    margin: 28px 0 10px;
+    padding-top: 34px; /* room for hover lift */
+    overflow: visible;
+}
+
+body.catalog-category-view .products.wrapper.grid .product-item,
+body.catalogsearch-result-index .products.wrapper.grid .product-item {
+    width: auto !important;
+    margin: 0 !important;
+}
+
+/* Card */
+body.catalog-category-view .products.wrapper.grid .product-item-info,
+body.catalogsearch-result-index .products.wrapper.grid .product-item-info {
+    position: relative;
+    background: linear-gradient(180deg, #14161b 0%, #101217 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-top-color: rgba(255, 255, 255, 0.02); /* avoid visible white line on top edge */
+    border-radius: 22px;
+    padding: 22px 18px 18px;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    will-change: transform;
+}
+
+/* Keep all cards same height in grid (prevents a single item "growing") */
+body.catalog-category-view .products-grid .product-item-info,
+body.catalogsearch-result-index .products-grid .product-item-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 430px;
+}
+
+body.catalog-category-view .products-grid .product-item-details,
+body.catalogsearch-result-index .products-grid .product-item-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+body.catalog-category-view .products-grid .product-item-inner,
+body.catalogsearch-result-index .products-grid .product-item-inner {
+    margin-top: auto !important; /* push actions to bottom */
+}
+
+body.catalog-category-view .products.wrapper.grid .product-item-info:hover,
+body.catalogsearch-result-index .products.wrapper.grid .product-item-info:hover {
+    transform: translateY(-4px);
+    border-color: rgba(214, 160, 60, 0.35);
+    box-shadow: 0 22px 65px rgba(0, 0, 0, 0.45);
+    z-index: 20;
+    /* Prevent Luma hover rules from changing box size */
+    margin: 0 !important;
+    padding: 22px 18px 18px !important;
+}
+
+/* Prevent hover card from being clipped by parents */
+body.catalog-category-view .products.wrapper.grid,
+body.catalogsearch-result-index .products.wrapper.grid,
+body.catalog-category-view .products.wrapper.grid .product-items,
+body.catalogsearch-result-index .products.wrapper.grid .product-items,
+body.catalog-category-view .products.wrapper.grid .product-item,
+body.catalogsearch-result-index .products.wrapper.grid .product-item {
+    overflow: visible !important;
+}
+
+/* Soft "pill" backdrop like the reference design */
+body.catalog-category-view .products.wrapper.grid .product-item-info::before,
+body.catalogsearch-result-index .products.wrapper.grid .product-item-info::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 34px;
+    width: 180px;
+    height: 250px;
+    transform: translateX(-50%);
+    border-radius: 100px;
+    background: radial-gradient(closest-side, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+/* Image */
+body.catalog-category-view .products.wrapper.grid .product-item-photo,
+body.catalogsearch-result-index .products.wrapper.grid .product-item-photo {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto 10px;
+    justify-content: center;
+    align-items: center;
+    height: 210px; /* consistent image block height */
+}
+
+body.catalog-category-view .products.wrapper.grid .product-item-photo img,
+body.catalogsearch-result-index .products.wrapper.grid .product-item-photo img {
+    border-radius: 16px;
+    mix-blend-mode: normal;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+body.catalog-category-view .products.wrapper.grid .product-image-container,
+body.catalogsearch-result-index .products.wrapper.grid .product-image-container,
+body.catalog-category-view .products.wrapper.grid .product-image-wrapper,
+body.catalogsearch-result-index .products.wrapper.grid .product-image-wrapper {
+    max-width: 100%;
+}
+
+/* Magento adds inline padding-bottom to keep aspect ratio; override for consistent centering */
+body.catalog-category-view .products.wrapper.grid .product-item-photo .product-image-container,
+body.catalogsearch-result-index .products.wrapper.grid .product-item-photo .product-image-container {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    height: 100% !important;
+    padding-bottom: 0 !important;
+}
+
+body.catalog-category-view .products.wrapper.grid .product-item-photo .product-image-container img,
+body.catalogsearch-result-index .products.wrapper.grid .product-item-photo .product-image-container img {
+    max-height: 100%;
+    width: auto;
+}
+
+/* Text */
+body.catalog-category-view .product-item-name,
+body.catalogsearch-result-index .product-item-name {
+    margin: 8px 0 8px;
+}
+
+body.catalog-category-view .product-item-link,
+body.catalogsearch-result-index .product-item-link {
+    color: #ffffff !important;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    text-decoration: none !important;
+}
+
+body.catalog-category-view .product-item-link:hover,
+body.catalogsearch-result-index .product-item-link:hover {
+    color: #d6a03c !important;
+}
+
+/* Price */
+body.catalog-category-view .price-box,
+body.catalogsearch-result-index .price-box {
+    margin: 0 0 12px;
+}
+
+body.catalog-category-view .price-box .price,
+body.catalogsearch-result-index .price-box .price {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+body.catalog-category-view .old-price .price,
+body.catalogsearch-result-index .old-price .price {
+    color: rgba(233, 233, 234, 0.55) !important;
+    text-decoration: line-through;
+}
+
+body.catalog-category-view .special-price .price,
+body.catalogsearch-result-index .special-price .price {
+    color: #ffffff !important;
+}
+
+/* Actions */
+body.catalog-category-view .product-item-actions,
+body.catalogsearch-result-index .product-item-actions {
+    margin-top: 12px;
+}
+
+/* Actions alignment (widgets/sliders/CMS pages) */
+.products.wrapper.grid .product-item-actions,
+.products-grid .product-item-actions,
+.product-item-info .product-item-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 6px !important; /* keep icons close to Add to Cart */
+    flex-wrap: nowrap !important;
+    background: transparent !important;
+}
+
+.products.wrapper.grid .product-item-actions .actions-primary,
+.products-grid .product-item-actions .actions-primary,
+.product-item-info .product-item-actions .actions-primary {
+    display: flex !important;
+    align-items: center !important;
+    flex: 0 0 auto !important;
+    min-width: 0;
+    float: none !important;
+    clear: none !important;
+    width: auto !important;
+    position: static !important;
+}
+
+.products.wrapper.grid .product-item-actions .actions-primary form,
+.products-grid .product-item-actions .actions-primary form,
+.product-item-info .product-item-actions .actions-primary form {
+    display: flex;
+    align-items: center;
+    margin: 0 !important;
+    min-width: 0;
+}
+
+.products.wrapper.grid .product-item-actions .actions-secondary,
+.products-grid .product-item-actions .actions-secondary,
+.product-item-info .product-item-actions .actions-secondary {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px;
+    flex: 0 0 auto;
+    margin-left: 6px !important; /* sit right beside button */
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    align-self: center;
+    white-space: nowrap;
+    float: none !important;
+    clear: none !important;
+    width: auto !important;
+    position: static !important;
+}
+
+.products.wrapper.grid .product-item-actions .actions-secondary .action,
+.products-grid .product-item-actions .actions-secondary .action,
+.product-item-info .product-item-actions .actions-secondary .action {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center;
+    line-height: 1 !important;
+    margin-top: 0 !important;
+}
+
+/* Prevent button forcing icons down */
+.product-item-info .product-item-actions .action.tocart {
+    width: auto !important;
+    max-width: 100%;
+    white-space: nowrap !important;
+}
+
+/* Make sure Add to Cart doesn't take full row width (Luma sets 100% in some places) */
+.product-item-actions .actions-primary .action.tocart,
+.product-item-actions .actions-primary .tocart {
+    width: auto !important;
+    flex: 0 0 auto !important;
+}
+
+.product-item-actions .actions-primary,
+.product-item-actions .actions-primary form {
+    width: auto !important;
+    flex: 0 0 auto !important;
+}
+
+/* Always show actions in grid (Magento/Luma hides until hover) */
+body.catalog-category-view .products.wrapper.grid .product-item-inner,
+body.catalogsearch-result-index .products.wrapper.grid .product-item-inner {
+    display: block !important;
+}
+
+/* Undo Luma "visually hidden until hover" for grid actions */
+body.catalog-category-view .products-grid .product-item-inner,
+body.catalogsearch-result-index .products-grid .product-item-inner {
+    position: static !important;
+    clip: auto !important;
+    clip-path: none !important;
+    height: auto !important;
+    width: auto !important;
+    overflow: visible !important;
+    margin: 12px 0 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+body.catalog-category-view .products-grid .product-item-actions,
+body.catalogsearch-result-index .products-grid .product-item-actions {
+    display: flex !important;
+    background: transparent !important;
+}
+
+body.catalog-category-view .products.wrapper.grid .product-item-actions,
+body.catalogsearch-result-index .products.wrapper.grid .product-item-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px;
+    flex-wrap: nowrap !important;
+}
+
+body.catalog-category-view .products.wrapper.grid .actions-primary,
+body.catalogsearch-result-index .products.wrapper.grid .actions-primary {
+    display: flex !important;
+    align-items: center !important;
+    flex: 0 0 auto !important;
+}
+
+body.catalog-category-view .products.wrapper.grid .actions-secondary,
+body.catalogsearch-result-index .products.wrapper.grid .actions-secondary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent !important;
+    flex: 0 0 auto;
+    margin-left: 12px !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    align-self: center;
+}
+
+/* Keep Add to Cart + icons on the same row */
+body.catalog-category-view .products.wrapper.grid .actions-primary form,
+body.catalogsearch-result-index .products.wrapper.grid .actions-primary form {
+    display: flex;
+    align-items: center;
+    margin: 0 !important;
+}
+
+body.catalog-category-view .action.tocart.primary,
+body.catalogsearch-result-index .action.tocart.primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    width: auto !important; /* prevent forcing icons to next line */
+    max-width: 100%;
+}
+
+body.catalog-category-view .products.wrapper.grid .actions-secondary .action,
+body.catalogsearch-result-index .products.wrapper.grid .actions-secondary .action {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center;
+    line-height: 1 !important;
+    margin-top: 0 !important;
+}
+
+body.catalog-category-view .products.wrapper.grid .actions-secondary .action,
+body.catalogsearch-result-index .products.wrapper.grid .actions-secondary .action {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+body.catalog-category-view .action.tocart.primary,
+body.catalogsearch-result-index .action.tocart.primary {
+    background: #d6a03c !important;
+    border: 0 !important;
+    color: #0b0c0f !important;
+    border-radius: 12px !important;
+    padding: 10px 16px !important;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    box-shadow: 0 10px 24px rgba(214, 160, 60, 0.18);
+}
+
+body.catalog-category-view .action.tocart.primary:hover,
+body.catalogsearch-result-index .action.tocart.primary:hover {
+    background: #e1b255 !important;
+}
+
+/* Secondary links (wishlist/compare) */
+body.catalog-category-view .actions-secondary .action,
+body.catalogsearch-result-index .actions-secondary .action {
+    color: rgba(233, 233, 234, 0.85) !important;
+}
+
+/* Pager */
+body.catalog-category-view .pages a,
+body.catalogsearch-result-index .pages a,
+body.catalog-category-view .pages strong.page,
+body.catalogsearch-result-index .pages strong.page {
+    background: #14161b !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    color: #e9e9ea !important;
+    border-radius: 10px;
+}
+
+/* keep cart + links inline */
+.header.panel .minicart-wrapper,
+.header.panel .header.links {
+    display: flex;
+    align-items: center;
+}
+
+/* ===============================
+   FIX NAVBAR SAME LINE
+================================= */
+
+/* Make header horizontal */
+.header.panel {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start !important;
+}
+
+
+/* remove full width behavior */
+.nav-sections {
+    max-width: none !important;
+}
+
+/* navigation ul fix */
+.navigation {
+    display: flex !important;
+    gap: 40px;
+}
+
+/* push right side */
+.header.panel .block-search {
+    margin-left: auto !important;
+}
+
+/* ===============================
+   LAMBO HEADER + HERO
+================================= */
+
+:root {
+    --lambo-header-height: 78px;
+}
+
+/* Make the Magento panel wrapper not fight our header layout */
+.panel.header {
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+/* Hide default Luma header/menu so only Lambo header shows */
+.page-header .panel.wrapper,
+.page-header .header.content,
+.page-header .nav-sections,
+.page-header .navigation {
+    display: none !important;
+}
+
+/* Extra safety: hide any default top menu that may leak into the layout */
+.nav-sections,
+.navigation {
+    display: none !important;
+}
+
+body:not(.cms-index-index) {
+    padding-top: var(--lambo-header-height);
+}
+
+body.cms-index-index {
+    padding-top: 0;
+    overflow-x: hidden;
+}
+
+/* Homepage: remove side white space and allow full-bleed hero */
+body.cms-index-index,
+body.cms-index-index .page-wrapper,
+body.cms-index-index .page-main,
+body.cms-index-index .columns,
+body.cms-index-index .main,
+body.cms-index-index .column.main {
+    background: #000 !important;
+}
+
+body.cms-index-index .page-main,
+body.cms-index-index .columns,
+body.cms-index-index .main,
+body.cms-index-index .column.main {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100% !important;
+}
+
+body.cms-index-index .lambo-hero {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+/* Remove any white margin/background around the viewport */
+html,
+body {
+    margin: 0 !important;
+    background: #000 !important;
+}
+
+.lambo-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    height: var(--lambo-header-height);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.lambo-header__inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px 16px 24px;
+    pointer-events: auto;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.82) 55%,
+            rgba(0, 0, 0, 0.72) 100%);
+    transition: background 200ms ease;
+}
+
+.lambo-header--scrolled .lambo-header__inner {
+    background: rgba(0, 0, 0, 0.92);
+}
+
+/* .lambo-header__left,
+.lambo-header__center,
+.lambo-header__right {
+    display: flex;
+    align-items: center;
+} */
+
+.lambo-header__left {
+    width: 240px;
+    justify-content: flex-start;
+    margin-left: 270px;
+}
+
+.lambo-header__center {
+    flex: 0 0 auto;
+    justify-content: center;
+    margin-right: 190px;
+}
+
+.lambo-header__right {
+    width: 240px;
+    justify-content: flex-end;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.lambo-header__icon--cart {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Minicart inside lambo header: make it look like an icon */
+.lambo-header__icon--cart .minicart-wrapper {
+    margin: 0 !important;
+    float: none !important;
+    position: static !important;
+}
+
+.lambo-header__icon--cart .minicart-wrapper,
+.lambo-header__icon--cart .minicart-wrapper .block-minicart {
+    width: auto !important;
+}
+
+/* Mini cart popup: compact white dropdown (like reference) */
+body .minicart-wrapper .block-minicart,
+.lambo-header__icon--cart .minicart-wrapper .block-minicart {
+    position: fixed !important;
+    top: calc(var(--lambo-header-height) + 10px) !important;
+    right: 18px !important;
+    left: auto !important;
+    bottom: auto !important;
+    margin: 0 !important;
+    width: 360px !important;
+    min-width: 360px !important;
+    max-width: calc(100vw - 24px) !important;
+    max-height: calc(100vh - var(--lambo-header-height) - 24px) !important;
+    overflow: hidden !important;
+    background: #fff !important;
+    color: #111 !important;
+    border: 1px solid rgba(0, 0, 0, 0.18) !important;
+    border-radius: 2px !important;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28) !important;
+    z-index: 10050 !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+}
+
+/* Force dropdownDialog to not stretch the minicart */
+body .minicart-wrapper.active .block-minicart,
+body .minicart-wrapper .block-minicart._active,
+body .minicart-wrapper .block-minicart.active {
+    width: 360px !important;
+    min-width: 360px !important;
+    left: auto !important;
+    right: 18px !important;
+}
+
+@media (max-width: 420px) {
+    body .minicart-wrapper .block-minicart,
+    .lambo-header__icon--cart .minicart-wrapper .block-minicart {
+        width: calc(100vw - 24px) !important;
+        min-width: 0 !important;
+        right: 12px !important;
+    }
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart:before,
+.lambo-header__icon--cart .minicart-wrapper .block-minicart:after {
+    display: none !important;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .subtitle,
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .subtitle strong,
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .amount,
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .label,
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .product-item-name,
+.lambo-header__icon--cart .minicart-wrapper .block-minicart a,
+.lambo-header__icon--cart .minicart-wrapper .block-minicart a:visited {
+    color: #111 !important;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .items-total,
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .subtotal,
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .block-content {
+    background: transparent !important;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .block-title,
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .subtitle {
+    margin: 0 !important;
+    padding: 14px 16px 8px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .block-content {
+    padding: 0 16px 14px !important;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .minicart-items-wrapper {
+    max-height: 240px !important;
+    overflow: auto !important;
+    margin: 8px 0 10px !important;
+    padding-right: 4px;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .minicart-items .product-item {
+    border-color: rgba(0, 0, 0, 0.10) !important;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .minicart-items .product-item-name {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .details-qty input {
+    background: #fff !important;
+    border-color: rgba(0, 0, 0, 0.18) !important;
+    color: #111 !important;
+    border-radius: 2px !important;
+    height: 34px;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .subtotal {
+    padding: 10px 0 12px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .subtotal .label {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .subtotal .amount .price {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    padding-top: 10px !important;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .actions .primary .action.primary {
+    background: #1979c3 !important;
+    border-color: #1979c3 !important;
+    color: #fff !important;
+    border-radius: 2px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 900;
+}
+
+.lambo-header__icon--cart .minicart-wrapper .block-minicart .action.viewcart {
+    border-radius: 0 !important;
+    border: 0 !important;
+    color: #1979c3 !important;
+    background: transparent !important;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 600;
+}
+
+.lambo-header__icon--cart .action.showcart {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    color: inherit !important;
+    margin: 0 !important;
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 28px !important;
+    height: 28px !important;
+}
+
+.lambo-header__right > .lambo-header__search,
+.lambo-header__right > .lambo-header__icon--cart {
+    margin: 0 !important;
+}
+
+.lambo-header__icon--cart .action.showcart:before {
+    display: inline-block !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    color: #fff !important;
+    margin: 0 !important;
+}
+
+.lambo-header__icon--cart .action.showcart svg {
+    width: 22px;
+    height: 22px;
+}
+
+.lambo-header__icon--cart .counter.qty {
+    background: #e30000 !important;
+    color: #fff !important;
+    border-radius: 999px !important;
+    font-weight: 800;
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 5px;
+    margin-left: 0 !important;
+    position: absolute !important;
+    top: -6px !important;
+    right: -6px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 12px !important;
+}
+
+/* Search icon: remove old desktop offset so it stays in navbar */
+.lambo-header .block-search.custom-search .search-icon {
+    margin-left: 0 !important;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* ===============================
+   PREMIUM STORE/LANGUAGE SWITCHER
+================================= */
+:root {
+    --lt-sw-bg: #0a0a0a;
+    --lt-sw-bg2: #101010;
+    --lt-sw-text: #f4f4f4;
+    --lt-sw-muted: rgba(255, 255, 255, 0.7);
+    --lt-sw-border: rgba(255, 255, 255, 0.12);
+    --lt-sw-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+    --lt-sw-accent: #f0c300;
+    --lt-sw-radius: 14px;
+}
+
+.lt-switcher {
+    position: relative;
+    font-family: "Poppins", "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.lt-switcher__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    height: 42px;
+    padding: 0 12px;
+    border-radius: 999px;
+    border: 1px solid var(--lt-sw-border);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    color: var(--lt-sw-text);
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    letter-spacing: 0.02em;
+    font-weight: 800;
+}
+
+.lt-switcher__btn:hover {
+    border-color: rgba(255, 255, 255, 0.22);
+    transform: translateY(-1px);
+}
+
+.lt-switcher__btn:focus-visible {
+    outline: 2px solid rgba(240, 195, 0, 0.75);
+    outline-offset: 3px;
+}
+
+.lt-switcher__icon {
+    display: inline-flex;
+    color: var(--lt-sw-muted);
+}
+
+.lt-switcher__label {
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lt-switcher__chev {
+    display: inline-flex;
+    color: var(--lt-sw-muted);
+    transition: transform 0.18s ease;
+}
+
+.lt-switcher__menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: min(320px, calc(100vw - 24px));
+    background: var(--lt-sw-bg);
+    border: 1px solid var(--lt-sw-border);
+    border-radius: var(--lt-sw-radius);
+    box-shadow: var(--lt-sw-shadow);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+    pointer-events: none;
+    transition: opacity 0.16s ease, transform 0.16s ease;
+    z-index: 10040;
+}
+
+@media (hover: hover) {
+    .lt-switcher:hover .lt-switcher__menu {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+    }
+
+    .lt-switcher:hover .lt-switcher__chev {
+        transform: rotate(180deg);
+    }
+}
+
+.lt-switcher.is-open .lt-switcher__menu {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.lt-switcher.is-open .lt-switcher__chev {
+    transform: rotate(180deg);
+}
+
+.lt-switcher__opt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    color: var(--lt-sw-text);
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background 0.14s ease, color 0.14s ease;
+}
+
+.lt-switcher__opt:first-child {
+    border-top: 0;
+}
+
+.lt-switcher__opt:hover {
+    background: var(--lt-sw-bg2);
+}
+
+.lt-switcher__opt.is-active {
+    background: linear-gradient(90deg, rgba(240, 195, 0, 0.18), rgba(240, 195, 0, 0));
+    border-left: 3px solid var(--lt-sw-accent);
+}
+
+.lt-switcher__optText {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.lt-switcher__pill {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #000;
+    background: var(--lt-sw-accent);
+    padding: 6px 10px;
+    border-radius: 999px;
+    flex: 0 0 auto;
+}
+
+@media (max-width: 520px) {
+    .lt-switcher__btn {
+        height: 40px;
+        padding: 0 10px;
+    }
+
+    .lt-switcher__label {
+        max-width: 150px;
+    }
+
+    .lt-switcher__menu {
+        width: min(320px, calc(100vw - 16px));
+    }
+}
+
+.lambo-header__right .lambo-header__icon,
+.lambo-header__right .lambo-header__icon:visited {
+    color: #fff !important;
+}
+
+.lambo-header__right .lambo-header__search .action.search {
+    color: #fff !important;
+}
+
+.lambo-header__menu {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: inherit !important;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    text-transform: uppercase;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.lambo-header__menu:focus {
+    outline: none;
+}
+
+.lambo-header__menu:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.65);
+    outline-offset: 4px;
+}
+
+.lambo-burger {
+    width: 22px;
+    height: 14px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lambo-burger span {
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    opacity: 0.92;
+    transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.lambo-header--nav-open .lambo-burger span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.lambo-header--nav-open .lambo-burger span:nth-child(2) {
+    opacity: 0;
+}
+
+.lambo-header--nav-open .lambo-burger span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+.lambo-header__menu-text {
+    font-size: 14px;
+    line-height: 1;
+}
+
+/* Center logo sizing */
+.lambo-header .logo {
+    margin: 0 !important;
+}
+
+.lambo-header .logo img {
+    height: 34px;
+    width: auto;
+    max-width: 220px;
+}
+
+/* Header icons (search/cart/switcher) */
+.lambo-header__icon {
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+}
+
+.lambo-header__icon svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+.lambo-header__icon a,
+.lambo-header__icon button {
+    color: inherit !important;
+}
+
+/* Search as icon; expand on .active (handled by js/search-toggle.js) */
+.lambo-header .block-search {
+    margin: 0 !important;
+}
+
+.lambo-header .block-search input {
+    width: 0;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: width 180ms ease, opacity 180ms ease, padding 180ms ease;
+    background: transparent;
+    color: inherit;
+}
+
+.lambo-header .block-search.active input {
+    width: 220px;
+    opacity: 1;
+    pointer-events: auto;
+    padding: 8px 12px 8px 36px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+}
+
+.lambo-header .block-search .label,
+.lambo-header .block-search .action.search span {
+    display: none !important;
+}
+
+.lambo-header .block-search .action.search {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.lambo-header .block-search .action.search:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 22px;
+    height: 22px;
+    transform: translate(-50%, -50%);
+    background: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='11' cy='11' r='6.5' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M16.2 16.2L21 21' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='11' cy='11' r='6.5' fill='none' stroke='black' stroke-width='2'/%3E%3Cpath d='M16.2 16.2L21 21' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.lambo-header .block-search.active .action.search {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Minicart icon color */
+.lambo-header .minicart-wrapper .action.showcart:before {
+    color: currentColor !important;
+}
+
+.lambo-header .minicart-wrapper .counter.qty {
+    background: #ffcc00;
+    color: #000;
+}
+
+/* Language switcher: keep compact and inherit color */
+.lambo-header .switcher-language .switcher-trigger strong span,
+.lambo-header .switcher-store .switcher-trigger strong span {
+    color: inherit !important;
+    border-bottom-color: currentColor !important;
+}
+
+.lambo-header .switcher-language .switcher-trigger strong span::before,
+.lambo-header .switcher-store .switcher-trigger strong span::before {
+    color: inherit !important;
+}
+
+/* Off-canvas / dropdown nav */
+.lambo-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: auto;
+    z-index: 1;
+    padding-top: var(--lambo-header-height);
+    background: #000;
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.lambo-header--nav-open .lambo-nav {
+    display: block;
+}
+
+.lambo-nav__inner {
+    padding: 24px 56px 40px;
+    height: 100%;
+    max-height: calc(100vh - var(--lambo-header-height));
+    overflow: auto;
+}
+
+/* Hide double scrollbars (keep scrolling, hide the "sliders") */
+html,
+body,
+.lambo-nav__inner {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge legacy */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.lambo-nav__inner::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.lambo-nav .navigation {
+    display: block !important;
+}
+
+.lambo-nav .navigation,
+.lambo-nav .navigation ul,
+.lambo-nav .navigation li {
+    background: transparent !important;
+}
+
+.lambo-nav .navigation>ul {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 56px;
+    row-gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lambo-nav .navigation>ul>li.level0 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 18px 0;
+}
+
+.lambo-nav .navigation>ul>li.level0>a.level-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.lambo-nav .navigation>ul>li.level0>a.level-top:after {
+    content: "›";
+    font-size: 22px;
+    opacity: 0.7;
+}
+
+.lambo-nav .navigation a {
+    color: #fff !important;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.lambo-nav .navigation .submenu {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    min-width: 0;
+    margin-top: 14px;
+    padding: 0;
+}
+
+.lambo-nav .navigation .submenu>li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.lambo-nav .navigation .submenu a {
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    opacity: 0.9;
+    text-transform: none;
+}
+
+.lambo-header--nav-open .lambo-header__inner {
+    background: rgba(0, 0, 0, 0.94);
+}
+
+body.lambo-nav-open {
+    overflow: hidden;
+}
+
+/* HERO */
+.lambo-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 560px;
+    overflow: hidden;
+    background: #000;
+    touch-action: pan-y;
+}
+
+.lambo-hero__slides,
+.lambo-hero__slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.lambo-hero__slides {
+    z-index: 1;
+}
+
+.lambo-hero__slide {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity var(--hero-transition-ms, 700ms) ease,
+        visibility 0s linear var(--hero-transition-ms, 700ms);
+    background: #000;
+    pointer-events: none;
+    will-change: opacity;
+}
+
+.lambo-hero__slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    transition:
+        opacity var(--hero-transition-ms, 700ms) ease,
+        visibility 0s;
+    pointer-events: auto;
+}
+
+.lambo-hero__slide[data-slide-type="image"] {
+    background-position: center;
+    background-size: cover;
+}
+
+.lambo-hero__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lambo-hero__vignette {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 3;
+    background:
+        radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.55) 100%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.35));
+}
+
+.lambo-hero__content {
+    position: absolute;
+    left: 56px;
+    bottom: 140px;
+    z-index: 5;
+    color: #fff;
+    max-width: 820px;
+}
+
+.lambo-hero__subtitle,
+.lambo-hero__title,
+.lambo-hero__cta {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 600ms ease, transform 700ms ease;
+}
+
+.lambo-hero--content-in .lambo-hero__subtitle,
+.lambo-hero--content-in .lambo-hero__title,
+.lambo-hero--content-in .lambo-hero__cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lambo-hero__subtitle {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.lambo-hero__title {
+    font-size: 86px;
+    line-height: 0.92;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+.lambo-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 26px;
+    background: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.lambo-hero__cta span {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.lambo-hero__controls {
+    position: absolute;
+    right: 56px;
+    bottom: 56px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    z-index: 5;
+}
+
+.lambo-hero__dots {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.lambo-hero__dot {
+    width: 64px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.28);
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.lambo-hero__dot.is-active {
+    background: rgba(255, 255, 255, 0.92);
+}
+
+.lambo-hero__pause {
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    cursor: pointer;
+    clip-path: polygon(25% 6%, 75% 6%, 98% 50%, 75% 94%, 25% 94%, 2% 50%);
+    display: grid;
+    place-items: center;
+}
+
+.lambo-hero__pause:before {
+    content: "II";
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    transform: translateX(1px);
+}
+
+/* MODELS SLIDER (below hero) */
+.lambo-models {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    padding: 64px 56px 72px;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+/* Homepage: header overlays hero, but next section must start below header */
+body.cms-index-index .lambo-models {
+    padding-top: calc(64px + var(--lambo-header-height));
+}
+
+.lambo-models__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 22px;
+}
+
+.lambo-models__kicker {
+    margin: 0;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #111;
+}
+
+.lambo-models__all {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.lambo-models__stage {
+    position: relative;
+    min-height: 720px;
+}
+
+.lambo-models__slides {
+    position: relative;
+    min-height: inherit;
+}
+
+.lambo-models__slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity var(--models-transition-ms, 500ms) ease,
+        visibility 0s linear var(--models-transition-ms, 500ms);
+}
+
+.lambo-models__slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    transition:
+        opacity var(--models-transition-ms, 500ms) ease,
+        visibility 0s;
+}
+
+.lambo-models__content {
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 18px;
+    padding: 28px 0 0;
+    text-align: center;
+}
+
+.lambo-models__mark {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #111;
+}
+
+.lambo-models__headline {
+    margin: 0;
+    font-size: 78px;
+    line-height: 0.92;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #4c4c4c;
+}
+
+.lambo-models__car {
+    width: min(1080px, 92vw);
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    filter: drop-shadow(0 24px 26px rgba(0, 0, 0, 0.14));
+}
+
+.lambo-models__ctas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.lambo-models__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 18px 26px;
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid rgba(0, 0, 0, 0.55);
+    min-width: 260px;
+}
+
+.lambo-models__cta--primary {
+    background: #b08a2a;
+    border-color: #b08a2a;
+    color: #fff;
+}
+
+.lambo-models__cta--secondary {
+    background: #fff;
+    color: #111;
+}
+
+.lambo-models__arrow {
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    width: 58px;
+    height: 58px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    background: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    z-index: 5;
+    clip-path: polygon(25% 6%, 75% 6%, 98% 50%, 75% 94%, 25% 94%, 2% 50%);
+}
+
+.lambo-models__arrow:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    border-right: 2px solid #111;
+    border-bottom: 2px solid #111;
+    transform: rotate(135deg);
+}
+
+.lambo-models__arrow--prev {
+    left: 38px;
+}
+
+.lambo-models__arrow--next {
+    right: 38px;
+}
+
+.lambo-models__arrow--next:before {
+    transform: rotate(-45deg);
+}
+
+.lambo-models__tabs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    z-index: 6;
+    padding: 0 18px;
+}
+
+.lambo-models__tab {
+    border: 0;
+    background: transparent;
+    padding: 10px 2px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.22);
+}
+
+.lambo-models__tab.is-active {
+    color: #111;
+    border-bottom-color: #b08a2a;
+}
+
+@media (max-width: 1024px) {
+    .lambo-header__inner {
+        padding: 14px 18px;
+    }
+
+    .lambo-header__left,
+    .lambo-header__right {
+        width: auto;
+    }
+
+    .lambo-header__menu-text {
+        display: none;
+    }
+
+    .lambo-nav__inner {
+        padding: 18px;
+    }
+
+    .lambo-nav .navigation>ul {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+
+    .lambo-hero__controls {
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .lambo-hero__dot {
+        width: 42px;
+    }
+
+    .lambo-hero__content {
+        left: 18px;
+        right: 18px;
+        bottom: 120px;
+        max-width: none;
+    }
+
+    .lambo-hero__subtitle {
+        font-size: 14px;
+    }
+
+    .lambo-hero__title {
+        font-size: 44px;
+    }
+
+    .lambo-models {
+        padding: 44px 18px 68px;
+    }
+
+    .lambo-models__kicker {
+        font-size: 28px;
+    }
+
+    .lambo-models__stage {
+        min-height: 620px;
+    }
+
+    .lambo-models__headline {
+        font-size: 44px;
+    }
+
+    .lambo-models__mark {
+        font-size: 34px;
+    }
+
+    .lambo-models__arrow--prev {
+        left: 10px;
+    }
+
+    .lambo-models__arrow--next {
+        right: 10px;
+    }
+}
+
+
+/* ===============================
+   LOGO VERTICAL CENTER FIX
+================================= */
+
+/* header height consistent karo */
+.header.panel {
+    min-height: 90px;
+    /* 🔥 adjust if needed */
+    display: flex;
+    align-items: center;
+    /* 🔥 vertical center */
+}
+
+/* logo container fix */
+.header.panel>.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    align-self: center !important;
+    margin-top: 14px !important;
+    /* logo thoda niche */
+}
+
+/* logo image adjust */
+.header.panel>.logo img {
+    display: block;
+    height: 55px;
+    /* 🔥 thoda reduce for balance */
+    margin: 0 auto;
+}
+
+/* ===============================
+   THEME TWEAKS (MENU + SEARCH)
+================================= */
+
+
+
+/* 2nd bar menu (nav-sections header ke niche ho) ko bhi right shift */
+.page-header>.nav-sections {
+    left: 0 !important;
+    /* override earlier left:120px hack */
+    padding-left: 120px !important;
+    justify-content: flex-start !important;
+}
+
+.page-header>.nav-sections .navigation {
+    margin: 0 !important;
+    /* override margin:0 auto center */
+}
+
+@media (max-width: 1024px) {
+    .page-header>.nav-sections {
+        padding-left: 40px !important;
+    }
+}
+
+/* Search box: icon click par open */
+.block-search.custom-search {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    overflow: visible;
+}
+
+.block-search.custom-search .search-icon {
+    cursor: pointer;
+    line-height: 1;
+    user-select: none;
+}
+
+@media (min-width: 769px) {
+    .block-search.custom-search .search-icon {
+        margin-left: 410px !important;
+    }
+}
+
+.block-search.custom-search .search-box {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    z-index: 10000;
+}
+
+.block-search.custom-search.active .search-box {
+    display: block;
+}
+
+.block-search.custom-search .search-box input {
+    width: 320px;
+    max-width: calc(100vw - 40px);
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* reset any inline styles that push input sideways */
+.block-search.custom-search .search-box input[style] {
+    position: static !important;
+    margin: 0 !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+/* ===============================
+   FINAL LANGUAGE SWITCHER (CLEAN UI)
+================================= */
+
+/* WRAPPER */
+.header.panel>.switcher-language {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+    z-index: 1000;
+}
+
+/* HIDE DEFAULT LABEL */
+.header.panel>.switcher-language .switcher-label {
+    display: none !important;
+}
+
+/* TRIGGER BUTTON */
+.header.panel>.switcher-language .switcher-trigger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: transparent !important;
+    border: none !important;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.header.panel>.switcher-language .switcher-trigger:hover {
+    background: #f5f5f5;
+}
+
+/* TEXT STYLE (FIX BLACK COLOR) */
+.header.panel>.switcher-language .switcher-trigger strong,
+.header.panel>.switcher-language .switcher-trigger strong span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
+/* REMOVE BLUE/PURPLE LINK ISSUE */
+.header.panel>.switcher-language .switcher-trigger strong span:visited,
+.header.panel>.switcher-language .switcher-trigger strong span:focus,
+.header.panel>.switcher-language .switcher-trigger strong span:active {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
+/* ICON ADD */
+.header.panel>.switcher-language .switcher-trigger strong span::before {
+    content: "🌐";
+    margin-right: 6px;
+}
+
+/* REMOVE OUTLINE */
+.header.panel>.switcher-language .switcher-trigger,
+.header.panel>.switcher-language .switcher-trigger * {
+    outline: none !important;
+}
+
+/* ===============================
+   DROPDOWN
+================================= */
+
+.header.panel>.switcher-language .switcher-dropdown {
+    display: none;
+    position: absolute;
+    top: 130%;
+    right: 0;
+    background: #fff;
+    border-radius: 10px;
+    padding: 8px 0;
+    min-width: 170px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* SHOW DROPDOWN */
+.header.panel>.switcher-language:hover .switcher-dropdown,
+.header.panel>.switcher-language.active .switcher-dropdown {
+    display: block;
+}
+
+/* LIST */
+.header.panel>.switcher-language .switcher-dropdown li {
+    list-style: none;
+}
+
+/* LINK */
+.header.panel>.switcher-language .switcher-dropdown li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 13px;
+    color: #000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* ICON */
+.header.panel>.switcher-language .switcher-dropdown li a::before {
+    content: "🌐";
+    margin-right: 8px;
+}
+
+/* HOVER */
+.header.panel>.switcher-language .switcher-dropdown li a:hover {
+    background: #f5f5f5;
+}
+
+/* ===============================
+   SMALL SCREEN FIX
+================================= */
+
+@media (max-width: 768px) {
+    .header.panel>.switcher-language .switcher-dropdown {
+        right: auto;
+        left: 0;
+    }
+}
+
+
+/* ===============================
+   FINAL FORCE RIGHT ALIGN (WORKING)
+================================= */
+
+/* make header flex */
+.header.panel {
+    display: flex !important;
+    align-items: center;
+}
+
+/* 🔥 create right group */
+.header.panel .block-search {
+    margin-left: auto !important;
+}
+
+/* group all right items */
+.header.panel .block-search,
+.header.panel .minicart-wrapper,
+.header.panel .header.links,
+.header.panel .switcher-language {
+    display: inline-flex !important;
+    align-items: center;
+}
+
+/* spacing */
+.header.panel .minicart-wrapper {
+    margin-left: 15px !important;
+}
+
+.header.panel .header.links {
+    margin-left: 15px !important;
+    gap: 10px;
+}
+
+.header.panel .switcher-language {
+    margin-left: 15px !important;
+}
+
+
+
+
+/* ===============================
+   SHIFT WHOLE NAVBAR TO RIGHT
+================================= */
+
+/* header flex */
+.header.panel {
+    display: flex !important;
+    align-items: center;
+}
+
+
+/* menu inline */
+.navigation ul {
+    display: flex !important;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 26px;
+}
+
+.navigation ul>li {
+    flex: 0 0 auto;
+}
+
+.navigation ul>li>a {
+    white-space: nowrap;
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+    .navigation ul {
+        gap: 18px;
+    }
+
+    .navigation ul>li>a {
+        font-size: 13px;
+    }
+}
+
+/* right items spacing */
+.header.panel .block-search,
+.header.panel .minicart-wrapper,
+.header.panel .header.links,
+.header.panel .switcher-language {
+    margin-left: 15px !important;
+}
+
+/* ===============================
+   FINAL FOOTER DESIGN
+================================= */
+
+.custom-footer {
+    background: #000;
+    color: #fff;
+    padding: 90px 56px 140px;
+
+}
+
+.lambo-footer__inner {
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+.lambo-footer__top {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 56px;
+    align-items: start;
+}
+
+.lambo-footer__links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 56px;
+    row-gap: 26px;
+}
+
+.lambo-footer__link,
+.custom-footer a,
+.custom-footer a:visited,
+.custom-footer a:link {
+    color: #fff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1.15;
+}
+
+.lambo-footer__link:hover,
+.custom-footer a:hover {
+    opacity: 0.8;
+    color: #fff !important;
+}
+
+.lambo-footer__social-title {
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.lambo-footer__social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 18px;
+}
+
+.lambo-footer__social-icon {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.lambo-footer__social-icon svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+.lambo-footer__social-icon:hover {
+    opacity: 0.8;
+}
+
+.lambo-footer__rule {
+    margin: 56px 0 44px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.lambo-footer__rule--thin {
+    margin: 44px 0 34px;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.lambo-footer__legal {
+    max-width: 980px;
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.lambo-footer__legal p {
+    margin: 0 0 22px;
+}
+
+.lambo-footer__legal-title {
+    margin-top: 26px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.lambo-footer__bottom {
+    margin-top: 54px;
+    display: flex;
+    justify-content: center;
+}
+
+.lambo-footer__logo {
+    width: 56px;
+    height: auto;
+    opacity: 0.95;
+}
+
+/* ===============================
+   CHECKOUT (MATCH LAMBO THEME)
+================================= */
+
+body.checkout-index-index,
+body.checkout-cart-index,
+body.checkout-onepage-success {
+    background: #000 !important;
+}
+
+body.checkout-index-index .page-main,
+body.checkout-cart-index .page-main,
+body.checkout-onepage-success .page-main {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 32px 24px 48px;
+    background: transparent;
+}
+
+body.checkout-index-index .page-title-wrapper .page-title,
+body.checkout-cart-index .page-title-wrapper .page-title,
+body.checkout-onepage-success .page-title-wrapper .page-title {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+}
+
+body.checkout-index-index .opc-progress-bar-item,
+body.checkout-index-index .opc-progress-bar-item span {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+}
+
+/* Inputs */
+body.checkout-index-index .field input,
+body.checkout-index-index .field select,
+body.checkout-index-index .field textarea {
+    border-radius: 0;
+    border-color: rgba(255, 255, 255, 0.16);
+    background: #060606 !important;
+    color: #fff !important;
+}
+
+body.checkout-index-index .field input:focus,
+body.checkout-index-index .field select:focus,
+body.checkout-index-index .field textarea:focus {
+    border-color: #f0c300;
+    box-shadow: 0 0 0 2px rgba(240, 195, 0, 0.25);
+}
+
+body.checkout-index-index .field input::placeholder,
+body.checkout-index-index .field textarea::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+/* Chrome autofill keeps light background unless we override it */
+body.checkout-index-index input:-webkit-autofill,
+body.checkout-index-index input:-webkit-autofill:hover,
+body.checkout-index-index input:-webkit-autofill:focus,
+body.checkout-index-index textarea:-webkit-autofill,
+body.checkout-index-index textarea:-webkit-autofill:hover,
+body.checkout-index-index textarea:-webkit-autofill:focus,
+body.checkout-index-index select:-webkit-autofill,
+body.checkout-index-index select:-webkit-autofill:hover,
+body.checkout-index-index select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff !important;
+    -webkit-box-shadow: 0 0 0 1000px #060606 inset !important;
+    box-shadow: 0 0 0 1000px #060606 inset !important;
+    caret-color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.16) !important;
+    transition: background-color 9999s ease-out 0s;
+}
+
+body.checkout-index-index .field .control,
+body.checkout-index-index .fieldset > .field,
+body.checkout-index-index .fieldset > .field .control {
+    background: transparent !important;
+}
+
+/* Knockout UI fields used in checkout */
+body.checkout-index-index .opc-wrapper input,
+body.checkout-index-index .opc-wrapper select,
+body.checkout-index-index .opc-wrapper textarea,
+body.checkout-index-index .form-shipping-address input,
+body.checkout-index-index .form-shipping-address select,
+body.checkout-index-index .form-shipping-address textarea,
+body.checkout-index-index .checkout-billing-address input,
+body.checkout-index-index .checkout-billing-address select,
+body.checkout-index-index .checkout-billing-address textarea {
+    background: #060606 !important;
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.16) !important;
+    border-radius: 0 !important;
+}
+
+/* Dropdown arrow / UI selects */
+body.checkout-index-index select,
+body.checkout-index-index .select select,
+body.checkout-index-index .field select {
+    background-color: #060606 !important;
+}
+
+/* Primary buttons */
+body.checkout-index-index .action.primary,
+body.checkout-index-index .action-primary,
+body.checkout-index-index .button.action.primary,
+body.checkout-cart-index .action.primary,
+body.checkout-cart-index .action-primary,
+body.checkout-cart-index .button.action.primary {
+    background: #f0c300 !important;
+    border-color: #f0c300 !important;
+    color: #000 !important;
+    border-radius: 0 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+}
+
+body.checkout-index-index .action.primary:hover,
+body.checkout-index-index .action-primary:hover,
+body.checkout-cart-index .action.primary:hover,
+body.checkout-cart-index .action-primary:hover {
+    filter: brightness(0.95);
+}
+
+/* Secondary buttons */
+body.checkout-index-index .action.secondary,
+body.checkout-index-index .action-secondary,
+body.checkout-cart-index .action.secondary,
+body.checkout-cart-index .action-secondary {
+    border-radius: 0 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+}
+
+/* Summary */
+body.checkout-index-index .opc-block-summary,
+body.checkout-cart-index .cart-summary,
+body.checkout-index-index .opc-sidebar .modal-content {
+    border-radius: 0;
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+body.checkout-index-index .opc-block-summary > .title,
+body.checkout-cart-index .cart-summary > .title {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+}
+
+/* Checkout: make Order Summary dark (remove white box) */
+body.checkout-index-index .opc-sidebar,
+body.checkout-index-index .opc-sidebar .modal-content,
+body.checkout-index-index .opc-sidebar .opc-block-summary,
+body.checkout-index-index .opc-block-summary {
+    background: #0a0a0a !important;
+    background-image: none !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    color: #fff;
+}
+
+body.checkout-index-index .opc-block-summary > .title,
+body.checkout-index-index .opc-block-summary .title,
+body.checkout-index-index .opc-block-summary strong,
+body.checkout-index-index .opc-block-summary .mark,
+body.checkout-index-index .opc-block-summary .amount,
+body.checkout-index-index .opc-block-summary .items-in-cart > .title {
+    color: #fff !important;
+}
+
+body.checkout-index-index .opc-block-summary .table-totals,
+body.checkout-index-index .opc-block-summary .table-totals th,
+body.checkout-index-index .opc-block-summary .table-totals td,
+body.checkout-index-index .opc-block-summary .items-in-cart,
+body.checkout-index-index .opc-block-summary .items-in-cart .content,
+body.checkout-index-index .opc-block-summary .minicart-items-wrapper {
+    background: transparent !important;
+    border-color: rgba(255, 255, 255, 0.10) !important;
+}
+
+/* Make the main content area dark on cart/checkout */
+body.checkout-index-index .page-wrapper,
+body.checkout-cart-index .page-wrapper,
+body.checkout-onepage-success .page-wrapper {
+    background: #000 !important;
+}
+
+body.checkout-index-index .columns,
+body.checkout-cart-index .columns,
+body.checkout-onepage-success .columns,
+body.checkout-index-index .column.main,
+body.checkout-cart-index .column.main,
+body.checkout-onepage-success .column.main {
+    background: transparent !important;
+    color: #f2f2f2;
+}
+
+body.checkout-index-index .page-main,
+body.checkout-cart-index .page-main,
+body.checkout-onepage-success .page-main,
+body.checkout-index-index .page-main > *,
+body.checkout-cart-index .page-main > *,
+body.checkout-onepage-success .page-main > * {
+    background: transparent !important;
+}
+
+body.checkout-index-index .page-wrapper > *,
+body.checkout-cart-index .page-wrapper > *,
+body.checkout-onepage-success .page-wrapper > * {
+    background-color: transparent !important;
+}
+
+body.checkout-index-index .page-title-wrapper .page-title,
+body.checkout-cart-index .page-title-wrapper .page-title,
+body.checkout-onepage-success .page-title-wrapper .page-title,
+body.checkout-cart-index .cart.table-wrapper,
+body.checkout-cart-index .cart.table-wrapper a {
+    color: #fff;
+}
+
+/* Cart table */
+body.checkout-cart-index .cart.table-wrapper .table,
+body.checkout-cart-index .cart.table-wrapper .table thead,
+body.checkout-cart-index .cart.table-wrapper .table tbody {
+    background: #0a0a0a;
+}
+
+/* Ensure cart table area uses one consistent background */
+body.checkout-cart-index .cart-container,
+body.checkout-cart-index .cart.table-wrapper,
+body.checkout-cart-index .cart.table-wrapper .table,
+body.checkout-cart-index .cart.table-wrapper .table thead,
+body.checkout-cart-index .cart.table-wrapper .table tbody,
+body.checkout-cart-index .cart.table-wrapper .table tfoot,
+body.checkout-cart-index .cart.table-wrapper .table tr,
+body.checkout-cart-index .cart.table-wrapper .table th,
+body.checkout-cart-index .cart.table-wrapper .table td,
+body.checkout-cart-index .cart.table-wrapper .item-info,
+body.checkout-cart-index .cart.table-wrapper .item-actions,
+body.checkout-cart-index .cart.table-wrapper .item-actions td,
+body.checkout-cart-index .cart.table-wrapper .cart.item,
+body.checkout-cart-index .cart.table-wrapper .product-item-details,
+body.checkout-cart-index .cart.table-wrapper .product-item-name,
+body.checkout-cart-index .cart.table-wrapper .price,
+body.checkout-cart-index .cart.table-wrapper .subtotal {
+    background: #0a0a0a !important;
+    background-image: none !important;
+}
+
+body.checkout-cart-index .cart.table-wrapper .table th,
+body.checkout-cart-index .cart.table-wrapper .table td {
+    border-color: rgba(255, 255, 255, 0.08);
+    color: #f2f2f2;
+}
+
+/* Remove the 2 bright horizontal separators in cart table */
+body.checkout-cart-index .cart.table-wrapper,
+body.checkout-cart-index .cart.table-wrapper .table,
+body.checkout-cart-index .cart.table-wrapper .table thead th,
+body.checkout-cart-index .cart.table-wrapper .table tbody td,
+body.checkout-cart-index .cart.table-wrapper .table tbody th,
+body.checkout-cart-index .cart.table-wrapper .table tfoot td {
+    border-top-color: rgba(255, 255, 255, 0.08);
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.checkout-cart-index .cart.table-wrapper .table thead th,
+body.checkout-cart-index .cart.table-wrapper .table tbody td,
+body.checkout-cart-index .cart.table-wrapper .table tbody th {
+    border-bottom: 0 !important;
+}
+
+body.checkout-cart-index .cart.table-wrapper .table {
+    border: 0 !important;
+}
+
+body.checkout-cart-index .cart.table-wrapper .item-info,
+body.checkout-cart-index .cart.table-wrapper .item-actions,
+body.checkout-cart-index .cart.table-wrapper .item-actions td,
+body.checkout-cart-index .cart.table-wrapper .cart.item {
+    border-bottom: 0 !important;
+}
+
+body.checkout-cart-index .cart-container .cart.main.actions,
+body.checkout-cart-index .cart-container .cart.actions,
+body.checkout-cart-index .cart-container .action.update {
+    border-top: 0 !important;
+}
+
+body.checkout-cart-index .cart.table-wrapper input,
+body.checkout-cart-index .cart.table-wrapper select {
+    background: #060606;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+/* Summary box dark */
+body.checkout-cart-index .cart-summary {
+    background: #0a0a0a;
+    border-color: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+body.checkout-cart-index .cart-summary .summary.title,
+body.checkout-cart-index .cart-summary .block .title,
+body.checkout-cart-index .cart-summary .mark,
+body.checkout-cart-index .cart-summary .amount,
+body.checkout-cart-index .cart-summary strong {
+    color: #fff;
+}
+
+/* Cart: discount/coupon block */
+body.checkout-cart-index .cart-discount,
+body.checkout-cart-index .block.discount,
+body.checkout-cart-index .discount {
+    background: transparent !important;
+    color: #fff;
+}
+
+body.checkout-cart-index .block.discount > .title,
+body.checkout-cart-index .discount .title {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+}
+
+body.checkout-cart-index .block.discount .content,
+body.checkout-cart-index .discount .content {
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 16px;
+}
+
+body.checkout-cart-index .block.discount input,
+body.checkout-cart-index .discount input {
+    background: #060606;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.16);
+    border-radius: 0;
+}
+
+body.checkout-cart-index .block.discount .actions-toolbar .action,
+body.checkout-cart-index .discount .actions-toolbar .action {
+    border-radius: 0 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+}
+
+/* Cart: secondary buttons look dark */
+body.checkout-cart-index .action.update,
+body.checkout-cart-index .action.continue,
+body.checkout-cart-index .cart.actions .action {
+    background: transparent !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+}
+
+body.checkout-cart-index .action.update:hover,
+body.checkout-cart-index .action.continue:hover,
+body.checkout-cart-index .cart.actions .action:hover {
+    border-color: rgba(255, 255, 255, 0.38) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Cart: links */
+body.checkout-cart-index a,
+body.checkout-cart-index a:visited {
+    color: #fff;
+}
+
+body.checkout-cart-index a:hover {
+    color: #f0c300;
+}
+
+/* Hide default footer links */
+.footer.content ul.links,
+.page-footer .footer.content ul.links {
+    display: none !important;
+}
+
+/* Remove white gap between slider and footer */
+.cms-home-slider .page-footer,
+.cms-home-slider .page-wrapper,
+.cms-home-slider .page-main {
+    background: #000 !important;
+}
+
+/* Remove white gap on catalog pages (category/search) */
+body.catalog-category-view,
+body.catalogsearch-result-index,
+body.catalog-category-view .page-wrapper,
+body.catalogsearch-result-index .page-wrapper,
+body.catalog-category-view .page-main,
+body.catalogsearch-result-index .page-main,
+body.catalog-category-view .columns,
+body.catalogsearch-result-index .columns,
+body.catalog-category-view .column.main,
+body.catalogsearch-result-index .column.main,
+body.catalog-category-view .page-footer,
+body.catalogsearch-result-index .page-footer {
+    background: #000 !important;
+}
+
+body.catalog-category-view .page-main,
+body.catalogsearch-result-index .page-main {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Remove any remaining white strip at bottom */
+html,
+body,
+.page-wrapper {
+    background: #000 !important;
+}
+
+@media (max-width: 1024px) {
+    .custom-footer {
+        padding: 70px 18px 120px;
+    }
+
+    .lambo-footer__top {
+        grid-template-columns: 1fr;
+        gap: 44px;
+    }
+
+    .lambo-footer__links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 24px;
+        row-gap: 18px;
+    }
+}
+
+@media (max-width: 560px) {
+    .lambo-footer__links {
+        grid-template-columns: 1fr;
+    }
+
+    .lambo-footer__link {
+        font-size: 15px;
+    }
+}
+
+/*navbbar category fix design*/
+.page-header nav.navigation ul {
+    margin-left: 0 !important;
+}
+
+@media (min-width: 1400px) {
+    .page-header nav.navigation ul {
+        margin-left: 380px !important;
+    }
+}
+
+
+/* 🔥 LOGO SIZE INCREASE */
+.header.panel .logo img {
+    height: 90px !important;
+    /* adjust as you want */
+    width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   🔥 SEARCH DROPDOWN FINAL UI
+================================= */
+
+.block-search:not(.custom-search) {
+    position: relative !important;
+}
+
+/* HIDE DEFAULT */
+.block-search:not(.custom-search) .control {
+    display: none;
+}
+
+/* ===============================
+   ✅ DROPDOWN BELOW HEADER
+================================= */
+
+.block-search:not(.custom-search).active .control {
+    display: block !important;
+
+    position: fixed !important;
+    top: 80px;
+    /* header height ke according adjust */
+    left: 0;
+    width: 100%;
+
+    background: #fff;
+    padding: 25px 0;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    z-index: 9999;
+}
+
+/* ===============================
+   🎯 CENTER SEARCH BOX
+================================= */
+
+.block-search:not(.custom-search).active form {
+    max-width: 550px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ===============================
+   ✨ INPUT DESIGN (ROUNDED)
+================================= */
+
+.block-search:not(.custom-search).active input {
+    width: 100% !important;
+    padding: 14px 50px 14px 20px !important;
+
+    border: 1px solid #ddd !important;
+    border-radius: 30px !important;
+    background: #fff;
+
+    font-size: 14px;
+    outline: none;
+}
+
+/* focus effect */
+.block-search:not(.custom-search).active input:focus {
+    border-color: #999;
+}
+
+/* ===============================
+   🔍 ICON INSIDE INPUT
+================================= */
+
+.block-search:not(.custom-search).active .action.search {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ===============================
+   ❌ REMOVE INLINE STYLES
+================================= */
+
+.block-search:not(.custom-search) input[style] {
+    margin-left: 0 !important;
+    width: 100% !important;
+}
+
+/* === Placement Fix: search icon just before cart (desktop) === */
+@media (min-width: 769px) {
+    .header.panel {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center;
+    }
+
+    .header.panel .navigation {
+        order: 20;
+        min-width: 0;
+    }
+
+    .header.panel .block-search {
+        order: 90 !important;
+        margin-left: auto !important;
+    }
+
+    .header.panel .minicart-wrapper {
+        order: 100 !important;
+    }
+
+    .header.panel .header.links {
+        order: 110 !important;
+    }
+
+    .header.panel .switcher-language {
+        order: 120 !important;
+    }
+}
+
+
+
+
+
+
+
+
+/* //block */
+
+/* ===============================
+   🔥 GLOBAL RESET
+================================= */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ===============================
+   🔥 REMOVE MAGENTO CONTAINER GAP
+================================= */
+.cms-page-view .page-main {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.cms-page-view .columns {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.cms-page-view .column.main {
+    padding: 0 !important;
+}
+
+/* ================================================================
+   🏎️ HOME-SLIDER — FULLSCREEN LAMBORGHINI HERO BANNER
+   ================================================================
+   DOM (from live page):
+     .fullscreen-slider [data-appearance="full-bleed"]          ← parent row
+       └── .pagebuilder-slider.home-slider [data-content-type="slider"]
+             └── [data-content-type="slide"][data-appearance="poster"]
+                   └── [data-element="empty_link"]
+                         └── .pagebuilder-slide-wrapper [data-element="wrapper"]
+                               └── .pagebuilder-overlay.pagebuilder-poster-overlay
+                                     └── .pagebuilder-poster-content
+                                           ├── [data-element="content"]
+                                           └── button.pagebuilder-button-primary
+
+   PageBuilder injects  #html-body [data-pb-style=XXX]  inline
+   → We need #html-body prefix for specificity wins.
+   ================================================================ */
+
+/* ── 0. PAGE-LEVEL RESETS ─────────────────────────────────────── */
+.cms-page-view .page-title-wrapper {
+    display: none !important;
+}
+
+/* Hide scrollbar visually — page still scrollable via wheel/trackpad */
+html:has(body.cms-home-slider),
+.cms-home-slider {
+    overflow-x: hidden !important;
+    scrollbar-width: none !important;
+    /* Firefox */
+    -ms-overflow-style: none !important;
+    /* IE/Edge */
+}
+
+html:has(body.cms-home-slider)::-webkit-scrollbar,
+.cms-home-slider::-webkit-scrollbar {
+    display: none !important;
+    /* Chrome/Safari */
+}
+
+.cms-home-slider .page-wrapper {
+    overflow: visible !important;
+    background: #000 !important;
+}
+
+.cms-home-slider,
+.cms-home-slider .page-wrapper,
+.cms-home-slider .page-main,
+.cms-home-slider .columns,
+.cms-home-slider .main,
+.cms-home-slider .column.main {
+    background: #000 !important;
+}
+
+.cms-page-view .page-main,
+.cms-page-view .columns,
+.cms-page-view .column.main {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* ── 1. PARENT ROW (fullscreen-slider) ────────────────────────── */
+#html-body .fullscreen-slider,
+#html-body .fullscreen-slider[data-content-type="row"] {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #000 !important;
+    /* Break out of centered container */
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    position: relative !important;
+}
+
+/* ── 2. ROOT SLIDER (.home-slider = pagebuilder-slider) ───────── */
+#html-body .home-slider,
+#html-body .pagebuilder-slider.home-slider {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #000 !important;
+}
+
+/* ── 3. SLICK INTERNALS — all fullscreen ──────────────────────── */
+#html-body .home-slider.slick-slider,
+#html-body .home-slider .slick-slider {
+    width: 100% !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    position: relative !important;
+}
+
+#html-body .home-slider .slick-list,
+#html-body .home-slider.slick-slider .slick-list {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#html-body .home-slider .slick-track,
+#html-body .home-slider.slick-slider .slick-track {
+    height: 100vh !important;
+    min-height: 100vh !important;
+}
+
+#html-body .home-slider .slick-slide,
+#html-body .home-slider.slick-slider .slick-slide {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: left !important;
+}
+
+#html-body .home-slider .slick-slide>div {
+    height: 100% !important;
+    min-height: 100vh !important;
+}
+
+/* ── 4. EACH SLIDE (data-content-type="slide") ────────────────── */
+#html-body .home-slider [data-content-type="slide"],
+#html-body .home-slider .pagebuilder-slide {
+    width: 100% !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* empty_link wrapper */
+#html-body .home-slider [data-element="empty_link"],
+#html-body .home-slider [data-content-type="slide"]>div {
+    width: 100% !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    position: relative !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ── 5. SLIDE WRAPPER (the one with background-image) ─────────── */
+#html-body .home-slider .pagebuilder-slide-wrapper,
+#html-body .home-slider [data-element="wrapper"] {
+    width: 100% !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* ── 6. IMAGE & VIDEO FULL COVER ──────────────────────────────── */
+#html-body .home-slider img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+#html-body .home-slider video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+/* YouTube / Vimeo iframes (injected by Jarallax or custom JS) */
+#html-body .home-slider iframe {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100vw !important;
+    height: 56.25vw !important;
+    min-height: 100vh !important;
+    min-width: 177.78vh !important;
+    transform: translate(-50%, -50%) !important;
+    pointer-events: none !important;
+    border: 0 !important;
+}
+
+/* ── 7. JARALLAX STACKING FIX ─────────────────────────────────── */
+#html-body .home-slider [id^="jarallax-container"] {
+    z-index: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#html-body .home-slider .jarallax-img {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Custom video background container */
+#html-body .home-slider .custom-video-bg {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+}
+
+/* ── 8. CINEMATIC VIGNETTE OVERLAY ────────────────────────────── */
+#html-body .home-slider .pagebuilder-overlay,
+#html-body .home-slider .pagebuilder-poster-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 2 !important;
+    background:
+        radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.50) 100%),
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.70) 0%,
+            rgba(0, 0, 0, 0) 30%,
+            rgba(0, 0, 0, 0) 65%,
+            rgba(0, 0, 0, 0.50) 100%) !important;
+    pointer-events: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: 0 !important;
+    background-color: transparent !important;
+    overflow: hidden !important;
+}
+
+/* ── 9. CONTENT POSITION (LEFT-BOTTOM like Lamborghini) ───────── */
+#html-body .home-slider .pagebuilder-poster-content {
+    position: absolute !important;
+    left: 56px !important;
+    bottom: 140px !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
+    max-width: 680px !important;
+    z-index: 5 !important;
+    pointer-events: auto !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+}
+
+#html-body .home-slider .pagebuilder-poster-content [data-element="content"] {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* ── 10. TYPOGRAPHY — Premium Lamborghini feel ────────────────── */
+#html-body .home-slider p {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 14px !important;
+    line-height: 1.4 !important;
+}
+
+#html-body .home-slider p span {
+    color: rgba(255, 255, 255, 0.90) !important;
+}
+
+#html-body .home-slider h1,
+#html-body .home-slider h2,
+#html-body .home-slider h3 {
+    font-size: 76px !important;
+    font-weight: 900 !important;
+    color: #fff !important;
+    line-height: 0.92 !important;
+    letter-spacing: 0.02em !important;
+    text-transform: uppercase !important;
+    margin: 0 0 28px 0 !important;
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* ── 11. CTA BUTTON — Lamborghini Yellow ──────────────────────── */
+#html-body .home-slider .pagebuilder-button-primary,
+#html-body .home-slider button.pagebuilder-button-primary {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    padding: 18px 28px !important;
+    background: #FFD200 !important;
+    color: #000 !important;
+    font-weight: 900 !important;
+    font-size: 13px !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+    transition: background 0.25s ease, transform 0.25s ease !important;
+    position: relative !important;
+    z-index: 6 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#html-body .home-slider .pagebuilder-button-primary:hover,
+#html-body .home-slider button.pagebuilder-button-primary:hover {
+    background: #e6be00 !important;
+    transform: translateX(6px) !important;
+}
+
+/* Arrow indicator */
+#html-body .home-slider .pagebuilder-button-primary::after {
+    content: "→" !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    transition: transform 0.25s ease !important;
+}
+
+#html-body .home-slider .pagebuilder-button-primary:hover::after {
+    transform: translateX(4px) !important;
+}
+
+/* ── 12. SLICK DOTS — Progress-bar style ──────────────────────── */
+#html-body .home-slider .slick-dots {
+    position: absolute !important;
+    bottom: 48px !important;
+    right: 56px !important;
+    left: auto !important;
+    width: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 18px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    z-index: 10 !important;
+}
+
+#html-body .home-slider .slick-dots li {
+    width: 60px !important;
+    height: 3px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#html-body .home-slider .slick-dots li button {
+    width: 100% !important;
+    height: 3px !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 2px !important;
+    background: rgba(255, 255, 255, 0.28) !important;
+    cursor: pointer !important;
+    transition: background 0.3s ease !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+}
+
+#html-body .home-slider .slick-dots li button:before {
+    display: none !important;
+}
+
+#html-body .home-slider .slick-dots li.slick-active button {
+    background: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* ── 13. SLICK ARROWS — Hidden ────────────────────────────────── */
+#html-body .home-slider .slick-prev,
+#html-body .home-slider .slick-next {
+    display: none !important;
+}
+
+/* ── 14. PAUSE / PLAY BUTTON (Hexagon) ────────────────────────── */
+#html-body .home-slider .home-slider__controls {
+    position: absolute !important;
+    bottom: 36px !important;
+    right: 56px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 22px !important;
+    z-index: 10 !important;
+}
+
+#html-body .home-slider .home-slider__pause {
+    width: 44px !important;
+    height: 44px !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    background: rgba(0, 0, 0, 0.30) !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    clip-path: polygon(25% 6%, 75% 6%, 98% 50%, 75% 94%, 25% 94%, 2% 50%) !important;
+    display: grid !important;
+    place-items: center !important;
+    font-size: 0 !important;
+    transition: background 0.2s ease !important;
+    padding: 0 !important;
+    margin-left: 12px !important;
+    flex-shrink: 0 !important;
+}
+
+#html-body .home-slider .home-slider__pause::before {
+    content: "❚❚" !important;
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+    color: #fff !important;
+    line-height: 1 !important;
+}
+
+#html-body .home-slider .home-slider__pause[aria-pressed="true"]::before {
+    content: "▶" !important;
+    letter-spacing: 0 !important;
+    font-size: 12px !important;
+}
+
+#html-body .home-slider .home-slider__pause:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* ── 15. KEN BURNS ZOOM — active slide ────────────────────────── */
+#html-body .home-slider .pagebuilder-slide-wrapper {
+    transition: none !important;
+}
+
+#html-body .home-slider .slick-slide .pagebuilder-slide-wrapper {
+    transform: scale(1) !important;
+    transition: transform 8s ease-out !important;
+}
+
+#html-body .home-slider .slick-active .pagebuilder-slide-wrapper {
+    transform: scale(1.04) !important;
+}
+
+/* ── 16. RESPONSIVE — Tablet ──────────────────────────────────── */
+@media (max-width: 1024px) {
+    #html-body .home-slider .pagebuilder-poster-content {
+        left: 32px !important;
+        bottom: 120px !important;
+        max-width: 520px !important;
+    }
+
+    #html-body .home-slider h1,
+    #html-body .home-slider h2,
+    #html-body .home-slider h3 {
+        font-size: 52px !important;
+    }
+
+    #html-body .home-slider .slick-dots {
+        right: 32px !important;
+        bottom: 32px !important;
+    }
+
+    #html-body .home-slider .slick-dots li {
+        width: 44px !important;
+    }
+
+    #html-body .home-slider .home-slider__controls {
+        right: 32px !important;
+        bottom: 22px !important;
+    }
+}
+
+/* ── 17. RESPONSIVE — Mobile ──────────────────────────────────── */
+@media (max-width: 768px) {
+
+    #html-body .fullscreen-slider,
+    #html-body .home-slider,
+    #html-body .home-slider .slick-list,
+    #html-body .home-slider .slick-track,
+    #html-body .home-slider .slick-slide,
+    #html-body .home-slider [data-content-type="slide"],
+    #html-body .home-slider [data-element="empty_link"],
+    #html-body .home-slider .pagebuilder-slide-wrapper {
+        height: 100svh !important;
+        min-height: 100svh !important;
+    }
+
+    #html-body .home-slider .pagebuilder-poster-content {
+        left: 18px !important;
+        right: 18px !important;
+        bottom: 100px !important;
+        max-width: 100% !important;
+    }
+
+    #html-body .home-slider h1,
+    #html-body .home-slider h2,
+    #html-body .home-slider h3 {
+        font-size: 36px !important;
+        margin-bottom: 16px !important;
+    }
+
+    #html-body .home-slider p {
+        font-size: 12px !important;
+    }
+
+    #html-body .home-slider .pagebuilder-button-primary {
+        padding: 14px 22px !important;
+        font-size: 11px !important;
+    }
+
+    #html-body .home-slider .slick-dots {
+        right: 18px !important;
+        bottom: 22px !important;
+        gap: 10px !important;
+    }
+
+    #html-body .home-slider .slick-dots li {
+        width: 32px !important;
+    }
+
+    #html-body .home-slider .home-slider__controls {
+        right: 18px !important;
+        bottom: 14px !important;
+    }
+
+    #html-body .home-slider .home-slider__pause {
+        width: 36px !important;
+        height: 36px !important;
+    }
+}
+
+/* ── 18. Fullscreen utility ───────────────────────────────────── */
+.fullwidth-slider-container,
+.home-slider {
+    max-width: none !important;
+}
+
+/* REMOVE PAGE TITLE SPACE */
+.page-title-wrapper {
+    display: none;
+}
+
+/* ================================================================
+   🏎️ LAMBORGHINI MODELS — PREMIUM SHOWCASE SECTION
+   ================================================================
+   DOM:
+     .model [data-content-type="row"][data-appearance="full-bleed"]
+       └── .pagebuilder-slider.lamborginimodels [data-content-type="slider"]
+             └── [data-content-type="slide"][data-appearance="poster"]
+                   └── [data-element="empty_link"]
+                         └── .pagebuilder-slide-wrapper [data-element="wrapper"]
+                               └── .pagebuilder-overlay.pagebuilder-poster-overlay
+                                     └── .pagebuilder-poster-content
+                                           ├── [data-element="content"]
+                                           │     ├── .lambo-models__mark
+                                           │     └── h3.lambo-models__headline
+                                           └── button.pagebuilder-button-primary
+   ================================================================ */
+
+/* ── 0. PARENT ROW (.model) ───────────────────────────────────── */
+#html-body .model,
+#html-body .model[data-content-type="row"] {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    padding: 0 !important;
+    background: #f5f5f5 !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* ── 1. MODELS HEADER BAR (injected by JS) ────────────────────── */
+.lambo-models-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 56px 0;
+}
+
+.lambo-models-header__title {
+    font-size: 28px;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0;
+    line-height: 1;
+}
+
+.lambo-models-header__link {
+    font-size: 13px;
+    font-weight: 800;
+    color: #000 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none !important;
+    border-bottom: 2px solid #000;
+    padding-bottom: 2px;
+    transition: opacity 0.25s ease;
+}
+
+.lambo-models-header__link:hover {
+    opacity: 0.6;
+}
+
+/* ── 2. SLIDER ROOT (.lamborginimodels) ───────────────────────── */
+#html-body .lamborginimodels,
+#html-body .pagebuilder-slider.lamborginimodels {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 90vh !important;
+    margin: 0 !important;
+    padding: 100px 0 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+}
+
+/* ── 3. SLICK INTERNALS ──────────────────────────────────────── */
+#html-body .lamborginimodels.slick-slider,
+#html-body .lamborginimodels .slick-slider {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 80vh !important;
+    position: relative !important;
+}
+
+#html-body .lamborginimodels .slick-list,
+#html-body .lamborginimodels.slick-slider .slick-list {
+    height: auto !important;
+    min-height: 80vh !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#html-body .lamborginimodels .slick-track,
+#html-body .lamborginimodels.slick-slider .slick-track {
+    height: auto !important;
+    min-height: 80vh !important;
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+#html-body .lamborginimodels .slick-slide,
+#html-body .lamborginimodels.slick-slider .slick-slide {
+    height: auto !important;
+    min-height: 80vh !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+}
+
+#html-body .lamborginimodels .slick-slide>div {
+    height: 100% !important;
+    min-height: 80vh !important;
+}
+
+/* ── 4. EACH SLIDE ───────────────────────────────────────────── */
+#html-body .lamborginimodels [data-content-type="slide"],
+#html-body .lamborginimodels .pagebuilder-slide {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 80vh !important;
+    position: relative !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+#html-body .lamborginimodels [data-element="empty_link"],
+#html-body .lamborginimodels [data-content-type="slide"]>div {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 80vh !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ── 4B. TEXT BLOCK (moved above car by JS) ──────────────────── */
+.lambo-models__text {
+    text-align: center !important;
+    padding: 0 20px !important;
+    margin: 0 auto 10px !important;
+    max-width: 900px !important;
+    width: 100% !important;
+}
+
+/* ── 5. SLIDE WRAPPER — Car image as centered contained bg ───── */
+#html-body .lamborginimodels .pagebuilder-slide-wrapper,
+#html-body .lamborginimodels [data-element="wrapper"] {
+    width: 100% !important;
+    max-width: 1000px !important;
+    height: 480px !important;
+    min-height: 480px !important;
+    position: relative !important;
+    overflow: visible !important;
+    margin: 10px auto 0 !important;
+    padding: 0 !important;
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-color: transparent !important;
+}
+
+/* ── 6. OVERLAY — Hidden (content moved by JS) ──────────────── */
+#html-body .lamborginimodels .pagebuilder-overlay,
+#html-body .lamborginimodels .pagebuilder-poster-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    z-index: 2 !important;
+    background: none !important;
+    background-color: transparent !important;
+    pointer-events: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+}
+
+/* ── 7. CONTENT POSITION — Centered above car ────────────────── */
+#html-body .lamborginimodels .pagebuilder-poster-content {
+    position: relative !important;
+    left: auto !important;
+    bottom: auto !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
+    max-width: 900px !important;
+    width: 100% !important;
+    z-index: 5 !important;
+    pointer-events: auto !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+}
+
+#html-body .lamborginimodels .pagebuilder-poster-content [data-element="content"] {
+    padding: 0 !important;
+    margin: 0 0 10px 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+/* ── 8. TYPOGRAPHY — Centered Premium ─────────────────────────── */
+#html-body .lamborginimodels .lambo-models__mark {
+    display: block !important;
+    font-size: 16px !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    color: #000 !important;
+    margin: 0 0 12px 0 !important;
+    text-align: center !important;
+}
+
+#html-body .lamborginimodels .lambo-models__headline,
+#html-body .lamborginimodels h1,
+#html-body .lamborginimodels h2,
+#html-body .lamborginimodels h3 {
+    font-size: clamp(32px, 5vw, 62px) !important;
+    font-weight: 900 !important;
+    color: #000 !important;
+    line-height: 1.0 !important;
+    letter-spacing: -0.01em !important;
+    text-transform: uppercase !important;
+    margin: 0 !important;
+    text-shadow: none !important;
+    text-align: center !important;
+}
+
+#html-body .lamborginimodels p {
+    color: #333 !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
+    letter-spacing: 0.02em !important;
+    text-align: center !important;
+}
+
+/* ── 9. CTA BUTTONS CONTAINER (injected by JS) ──────────────── */
+.lambo-models__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 30px auto 0;
+    z-index: 10;
+    position: relative;
+}
+
+/* Primary — "EXPLORE THE MODEL →" — Gold */
+#html-body .lamborginimodels .pagebuilder-button-primary,
+#html-body .lamborginimodels button.pagebuilder-button-primary,
+.lambo-models__buttons .lambo-btn--primary {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 16px 32px !important;
+    background: #C4A035 !important;
+    color: #fff !important;
+    font-weight: 800 !important;
+    font-size: 12px !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+    transition: background 0.3s ease, transform 0.2s ease !important;
+    position: relative !important;
+    z-index: 10 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    white-space: nowrap !important;
+}
+
+#html-body .lamborginimodels .pagebuilder-button-primary:hover,
+.lambo-models__buttons .lambo-btn--primary:hover {
+    background: #9e8228 !important;
+    transform: translateX(4px) !important;
+}
+
+/* Secondary — "DOWNLOAD BROCHURE ↓" — Outlined */
+.lambo-models__buttons .lambo-btn--secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: transparent;
+    color: #000;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.lambo-models__buttons .lambo-btn--secondary:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* ── 10. NAVIGATION ARROWS (injected by JS) ──────────────────── */
+.lambo-models__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 15;
+    width: 50px;
+    height: 50px;
+    background: transparent !important;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #000;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    opacity: 0.5;
+    padding: 0;
+}
+
+/* Prevent double icons from theme pseudo-elements */
+.lambo-models__arrow::before,
+.lambo-models__arrow::after {
+    display: none !important;
+    content: none !important;
+}
+
+.lambo-models__arrow:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lambo-models__arrow--prev {
+    left: 30px;
+}
+
+.lambo-models__arrow--next {
+    right: 30px;
+}
+
+/* ── 11. HIDE SLICK DOTS (replaced by custom tabs) ───────────── */
+#html-body .lamborginimodels .slick-dots {
+    display: none !important;
+}
+
+/* ── 12. HIDE DEFAULT SLICK ARROWS ───────────────────────────── */
+#html-body .lamborginimodels button.slick-arrow,
+#html-body .lamborginimodels button.slick-prev,
+#html-body .lamborginimodels button.slick-next {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* ── 13. HIDE HOME-SLIDER CONTROLS ON MODELS ─────────────────── */
+#html-body .lamborginimodels .home-slider__controls {
+    display: none !important;
+}
+
+/* ── 13B. CUSTOM MODEL TABS ───────────────────────────────────── */
+.lambo-models__tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    margin: 10px auto 40px;
+}
+
+.lambo-models__tabs-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    border-bottom: 2px solid #e0e0e0;
+    position: relative;
+}
+
+.lambo-tab {
+    position: relative;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #999;
+    transition: color 0.3s ease;
+    line-height: 1;
+    white-space: nowrap;
+    font-family: inherit;
+}
+
+.lambo-tab:hover {
+    color: #000;
+}
+
+.lambo-tab--active {
+    color: #000;
+}
+
+.lambo-tab--active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #C4A035;
+}
+
+/* ── 14. RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .lambo-models-header {
+        padding: 28px 28px 0;
+    }
+
+    .lambo-models-header__title {
+        font-size: 22px;
+    }
+
+    #html-body .lamborginimodels .pagebuilder-slide-wrapper,
+    #html-body .lamborginimodels [data-element="wrapper"] {
+        max-width: 800px !important;
+        height: 360px !important;
+        min-height: 360px !important;
+    }
+
+    .lambo-models__arrow--prev {
+        left: 10px;
+    }
+
+    .lambo-models__arrow--next {
+        right: 10px;
+    }
+
+    #html-body .lamborginimodels .slick-dots li button {
+        padding: 12px 18px !important;
+        font-size: 11px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .lambo-models-header {
+        padding: 20px 18px 0;
+    }
+
+    .lambo-models-header__title {
+        font-size: 18px;
+    }
+
+    .lambo-models-header__link {
+        font-size: 11px;
+    }
+
+    #html-body .lamborginimodels,
+    #html-body .pagebuilder-slider.lamborginimodels {
+        padding: 80px 0 0 !important;
+        min-height: 70vh !important;
+    }
+
+    #html-body .lamborginimodels .pagebuilder-slide-wrapper,
+    #html-body .lamborginimodels [data-element="wrapper"] {
+        max-width: 95% !important;
+        height: 220px !important;
+        min-height: 220px !important;
+    }
+
+    .lambo-models__buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .lambo-models__arrow {
+        display: none;
+    }
+
+    #html-body .lamborginimodels .slick-dots li button {
+        padding: 10px 14px !important;
+        font-size: 10px !important;
+        letter-spacing: 0.08em !important;
+    }
+
+    #html-body .lamborginimodels .slick-dots {
+        margin: 20px auto 30px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #html-body .lamborginimodels .pagebuilder-slide-wrapper,
+    #html-body .lamborginimodels [data-element="wrapper"] {
+        height: 180px !important;
+        min-height: 180px !important;
+    }
+
+    #html-body .lamborginimodels .lambo-models__mark {
+        font-size: 13px !important;
+    }
+}
+
+/* ================================================================
+   🏎️ CONFIGURE YOUR CAR — Lamborghini Configurator CTA
+   ================================================================
+   DOM (same as lamborginimodels — PageBuilder Slider):
+     [data-content-type="row"]  (parent row)
+       └── .pagebuilder-slider.configure-car [data-content-type="slider"]
+             └── [data-content-type="slide"][data-appearance="poster"]
+                   └── [data-element="empty_link"]
+                         └── .pagebuilder-slide-wrapper [data-element="wrapper"]
+                               └── .pagebuilder-overlay.pagebuilder-poster-overlay
+                                     └── .pagebuilder-poster-content
+                                           ├── [data-element="content"]
+                                           │     ├── p  ("Configure your")
+                                           │     └── h2 ("REVUELTO")
+                                           └── button.pagebuilder-button-primary
+   ================================================================ */
+
+/* ── PARENT ROW — Dark background ────────────────────────────── */
+#html-body .configure-car-row,
+#html-body .configure-car-row[data-content-type="row"] {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    padding: 0 !important;
+    background: #000 !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* ── HIDDEN ORIGINAL BUTTON (replaced by JS-injected container) ─ */
+#html-body .configure-car .configure-car__btn-hidden,
+.configure-car__btn-hidden {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* ── 0. SLIDER ROOT ──────────────────────────────────────────── */
+#html-body .configure-car,
+#html-body .pagebuilder-slider.configure-car {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 560px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #000 !important;
+}
+
+/* ── 1. SLICK INTERNALS ─────────────────────────────────────── */
+#html-body .configure-car.slick-slider,
+#html-body .configure-car .slick-slider {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 560px !important;
+    position: relative !important;
+}
+
+#html-body .configure-car .slick-list,
+#html-body .configure-car.slick-slider .slick-list {
+    height: auto !important;
+    min-height: 560px !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#html-body .configure-car .slick-track,
+#html-body .configure-car.slick-slider .slick-track {
+    height: auto !important;
+    min-height: 560px !important;
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+#html-body .configure-car .slick-slide,
+#html-body .configure-car.slick-slider .slick-slide {
+    height: auto !important;
+    min-height: 560px !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+}
+
+#html-body .configure-car .slick-slide>div {
+    height: 100% !important;
+    min-height: 560px !important;
+}
+
+/* ── 2. EACH SLIDE ──────────────────────────────────────────── */
+#html-body .configure-car [data-content-type="slide"],
+#html-body .configure-car .pagebuilder-slide {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 560px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #000 !important;
+}
+
+#html-body .configure-car [data-element="empty_link"],
+#html-body .configure-car [data-content-type="slide"]>div {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 560px !important;
+    position: relative !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ── 3. SLIDE WRAPPER — Car image pushed to RIGHT side ───────── */
+#html-body .configure-car .pagebuilder-slide-wrapper,
+#html-body .configure-car [data-element="wrapper"] {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 560px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    /* Car image as background — push to right half */
+    background-size: contain !important;
+    background-position: right center !important;
+    background-repeat: no-repeat !important;
+    background-color: #000 !important;
+}
+
+/* ── 4. OVERLAY — Subtle gradient from left for text readability ─ */
+#html-body .configure-car .pagebuilder-overlay,
+#html-body .configure-car .pagebuilder-poster-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    z-index: 2 !important;
+    /* Gradient: solid dark on left fading to transparent on right so car shows */
+    background: linear-gradient(to right,
+            #000 0%,
+            #000 30%,
+            rgba(0, 0, 0, 0.6) 50%,
+            rgba(0, 0, 0, 0) 65%) !important;
+    background-color: transparent !important;
+    pointer-events: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+}
+
+/* ── 5. CONTENT — Positioned LEFT, vertically centered ───────── */
+#html-body .configure-car .pagebuilder-poster-content {
+    position: absolute !important;
+    left: 80px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    bottom: auto !important;
+    right: auto !important;
+    max-width: 600px !important;
+    width: auto !important;
+    z-index: 5 !important;
+    pointer-events: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    text-align: left !important;
+}
+
+#html-body .configure-car .pagebuilder-poster-content [data-element="content"] {
+    padding: 0 !important;
+    margin: 0 0 10px 0 !important;
+    text-align: left !important;
+    width: 100% !important;
+}
+
+/* ── 6. TYPOGRAPHY — "CONFIGURE YOUR" label ──────────────────── */
+#html-body .configure-car p,
+#html-body .configure-car p span,
+#html-body .configure-car p strong,
+#html-body .configure-car p em {
+    color: #fff !important;
+    font-size: 18px !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.10em !important;
+    text-transform: uppercase !important;
+    margin: 0 0 12px 0 !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    font-style: normal !important;
+}
+
+/* Reset margin on inner spans */
+#html-body .configure-car p span,
+#html-body .configure-car p strong,
+#html-body .configure-car p em {
+    margin: 0 !important;
+}
+
+/* ── 7. TYPOGRAPHY — Model name (REVUELTO / TEMERARIO) ───────── */
+#html-body .configure-car h1,
+#html-body .configure-car h2,
+#html-body .configure-car h3,
+#html-body .configure-car h1 span,
+#html-body .configure-car h2 span,
+#html-body .configure-car h3 span {
+    font-size: clamp(52px, 7vw, 90px) !important;
+    font-weight: 900 !important;
+    color: #fff !important;
+    line-height: 0.92 !important;
+    letter-spacing: -0.02em !important;
+    text-transform: uppercase !important;
+    margin: 0 0 36px 0 !important;
+    text-shadow: none !important;
+    text-align: left !important;
+    font-style: normal !important;
+}
+
+/* Reset margin on heading spans */
+#html-body .configure-car h1 span,
+#html-body .configure-car h2 span,
+#html-body .configure-car h3 span {
+    margin: 0 !important;
+}
+
+/* ── 8. PRIMARY BUTTON — Gold "START CONFIGURATION" ──────────── */
+#html-body .configure-car .pagebuilder-button-primary,
+#html-body .configure-car button.pagebuilder-button-primary,
+#html-body .configure-car a.pagebuilder-button-primary {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 18px 34px !important;
+    background: #FFD200 !important;
+    color: #000 !important;
+    font-weight: 900 !important;
+    font-size: 13px !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    border: 2px solid #FFD200 !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+    transition: background 0.3s ease, transform 0.25s ease !important;
+    position: relative !important;
+    z-index: 6 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    white-space: nowrap !important;
+    line-height: 1 !important;
+}
+
+/* Config icon after primary button */
+#html-body .configure-car .pagebuilder-button-primary::after {
+    content: "⟳" !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    transition: transform 0.3s ease !important;
+}
+
+#html-body .configure-car .pagebuilder-button-primary:hover,
+#html-body .configure-car button.pagebuilder-button-primary:hover,
+#html-body .configure-car a.pagebuilder-button-primary:hover {
+    background: #e6be00 !important;
+    transform: translateX(4px) !important;
+}
+
+#html-body .configure-car .pagebuilder-button-primary:hover::after {
+    transform: rotate(90deg) !important;
+}
+
+/* ── 9. SECONDARY BUTTON — Outlined "EXPLORE THE MODEL" ──────── */
+#html-body .configure-car .pagebuilder-button-secondary,
+#html-body .configure-car button.pagebuilder-button-secondary,
+#html-body .configure-car a.pagebuilder-button-secondary {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 18px 32px !important;
+    background: transparent !important;
+    color: #fff !important;
+    font-weight: 800 !important;
+    font-size: 12px !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    border: 2px solid rgba(255, 255, 255, 0.45) !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+    transition: background 0.3s ease, border-color 0.3s ease !important;
+    white-space: nowrap !important;
+    line-height: 1 !important;
+}
+
+#html-body .configure-car .pagebuilder-button-secondary::after {
+    content: "→" !important;
+    font-size: 16px !important;
+    transition: transform 0.25s ease !important;
+}
+
+#html-body .configure-car .pagebuilder-button-secondary:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: #fff !important;
+}
+
+#html-body .configure-car .pagebuilder-button-secondary:hover::after {
+    transform: translateX(4px) !important;
+}
+
+/* ── 10. SLICK DOTS — Progress bars, bottom-center ───────────── */
+#html-body .configure-car .slick-dots {
+    position: absolute !important;
+    bottom: 30px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    right: auto !important;
+    width: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    z-index: 10 !important;
+}
+
+#html-body .configure-car .slick-dots li {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#html-body .configure-car .slick-dots li button {
+    width: 10px !important;
+    height: 10px !important;
+    padding: 0 !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.5) !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    cursor: pointer !important;
+    transition: background 0.3s ease, border-color 0.3s ease !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+}
+
+#html-body .configure-car .slick-dots li button:before {
+    display: none !important;
+}
+
+#html-body .configure-car .slick-dots li.slick-active button {
+    background: #fff !important;
+    border-color: #fff !important;
+}
+
+/* ── 11. HIDE SLICK ARROWS ──────────────────────────────────── */
+#html-body .configure-car .slick-prev,
+#html-body .configure-car .slick-next,
+#html-body .configure-car button.slick-arrow {
+    display: none !important;
+}
+
+/* ── 12. HIDE home-slider controls if present ────────────────── */
+#html-body .configure-car .home-slider__controls {
+    display: none !important;
+}
+
+/* ── 13. RESPONSIVE — Tablet ────────────────────────────────── */
+@media (max-width: 1024px) {
+    #html-body .configure-car .pagebuilder-poster-content {
+        left: 40px !important;
+        max-width: 400px !important;
+    }
+
+    #html-body .configure-car h1,
+    #html-body .configure-car h2,
+    #html-body .configure-car h3 {
+        font-size: clamp(40px, 5vw, 60px) !important;
+    }
+
+    #html-body .configure-car,
+    #html-body .configure-car .slick-list,
+    #html-body .configure-car .slick-track,
+    #html-body .configure-car .slick-slide,
+    #html-body .configure-car .slick-slide>div,
+    #html-body .configure-car [data-content-type="slide"],
+    #html-body .configure-car [data-element="empty_link"],
+    #html-body .configure-car .pagebuilder-slide-wrapper {
+        min-height: 460px !important;
+    }
+}
+
+/* ── 14. RESPONSIVE — Mobile ────────────────────────────────── */
+@media (max-width: 768px) {
+
+    #html-body .configure-car,
+    #html-body .configure-car .slick-list,
+    #html-body .configure-car .slick-track,
+    #html-body .configure-car .slick-slide,
+    #html-body .configure-car .slick-slide>div,
+    #html-body .configure-car [data-content-type="slide"],
+    #html-body .configure-car [data-element="empty_link"],
+    #html-body .configure-car .pagebuilder-slide-wrapper {
+        min-height: 520px !important;
+    }
+
+    /* Stack: text top, car bottom */
+    #html-body .configure-car .pagebuilder-slide-wrapper {
+        background-position: center bottom !important;
+        background-size: 85% auto !important;
+    }
+
+    #html-body .configure-car .pagebuilder-overlay,
+    #html-body .configure-car .pagebuilder-poster-overlay {
+        background: linear-gradient(to bottom,
+                #000 0%,
+                #000 35%,
+                rgba(0, 0, 0, 0.4) 55%,
+                rgba(0, 0, 0, 0) 75%) !important;
+    }
+
+    #html-body .configure-car .pagebuilder-poster-content {
+        left: 24px !important;
+        right: 24px !important;
+        top: 60px !important;
+        transform: none !important;
+        max-width: 100% !important;
+    }
+
+    #html-body .configure-car h1,
+    #html-body .configure-car h2,
+    #html-body .configure-car h3 {
+        font-size: 36px !important;
+        margin-bottom: 28px !important;
+    }
+
+    #html-body .configure-car p {
+        font-size: 13px !important;
+    }
+
+    #html-body .configure-car .pagebuilder-button-primary {
+        padding: 14px 24px !important;
+        font-size: 11px !important;
+    }
+
+    #html-body .configure-car .slick-dots {
+        bottom: 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #html-body .configure-car h1,
+    #html-body .configure-car h2,
+    #html-body .configure-car h3 {
+        font-size: 30px !important;
+    }
+
+    #html-body .configure-car .pagebuilder-slide-wrapper {
+        background-size: 95% auto !important;
+    }
+}
+
+/* ── 15. CONFIGURE-CAR TABS (injected by JS) ─────────────────── */
+.configure-car__tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 20px 0;
+    position: relative;
+    z-index: 15;
+    background: #000;
+}
+
+.configure-car__tabs-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+    position: relative;
+}
+
+.configure-tab {
+    position: relative;
+    padding: 14px 28px;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    transition: color 0.3s ease;
+    line-height: 1;
+    white-space: nowrap;
+    font-family: inherit;
+}
+
+.configure-tab:hover,
+.configure-tab:focus,
+.configure-tab:active {
+    color: rgba(255, 255, 255, 0.8);
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.configure-tab--active {
+    color: #fff;
+}
+
+.configure-tab--active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #C4A035;
+}
+
+/* ── 16. BUTTONS CONTAINER (injected by JS) ──────────────────── */
+.configure-car__buttons {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 16px !important;
+    flex-wrap: nowrap !important;
+    margin-top: 0 !important;
+    z-index: 10;
+    position: relative;
+}
+
+/* ── 17. SECONDARY BUTTON — "EXPLORE THE MODEL →" ────────────── */
+.configure-btn--secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 34px;
+    background: transparent;
+    color: #fff;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+    line-height: 1;
+    font-family: inherit;
+}
+
+.configure-btn--secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #fff;
+    color: #fff;
+}
+
+/* ── 18. DISCLAIMER BAR (injected by JS) ─────────────────────── */
+.configure-car__disclaimer {
+    display: block;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    line-height: 1.6;
+    padding: 18px 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: #000;
+    position: relative;
+    z-index: 5;
+}
+
+/* ── 19. TABS RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 768px) {
+    .configure-car__tabs {
+        padding: 20px 12px 0;
+    }
+
+    .configure-tab {
+        padding: 10px 16px;
+        font-size: 11px;
+    }
+
+    .configure-car__buttons {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+
+    .configure-btn--secondary {
+        padding: 14px 24px;
+        font-size: 11px;
+    }
+
+    .configure-car__disclaimer {
+        padding: 14px 24px;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,49 @@
+<?php
+/**
+ * Premium minimal store-view switcher (dark theme).
+ *
+ * Note: Magento "stores.phtml" normally switches store groups (websites/stores).
+ * For this theme we intentionally render store views here so users can switch
+ * between "Default Store View" and "Hindi" from the same dropdown.
+ *
+ * @var \Magento\Store\Block\Switcher $block
+ */
+?>
+
+<?php if (count($block->getStores()) > 1) : ?>
+    <div class="switcher store switcher-store lt-switcher" data-lt-switcher id="switcher-store">
+        <button class="lt-switcher__btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lt-switcher__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M2 12h20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M12 2c2.8 3 4.2 6.3 4.2 10S14.8 19 12 22c-2.8-3-4.2-6.3-4.2-10S9.2 5 12 2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+            </span>
+
+            <span class="lt-switcher__label"><?= $block->escapeHtml($block->getStoreName()) ?></span>
+
+            <span class="lt-switcher__chev" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+        </button>
+
+        <div class="lt-switcher__menu" role="listbox" aria-label="<?= $block->escapeHtmlAttr(__('Select Store')) ?>">
+            <?php foreach ($block->getStores() as $_store) : ?>
+                <?php $isActive = (int)$_store->getId() === (int)$block->getCurrentStoreId(); ?>
+                <a class="lt-switcher__opt<?= $isActive ? ' is-active' : '' ?>"
+                   role="option"
+                   aria-selected="<?= $isActive ? 'true' : 'false' ?>"
+                   href="#"
+                   data-post='<?= /* @noEscape */ $block->getTargetStorePostData($_store) ?>'>
+                    <span class="lt-switcher__optText"><?= $block->escapeHtml($_store->getName()) ?></span>
+                    <?php if ($isActive) : ?>
+                        <span class="lt-switcher__pill">Active</span>
+                    <?php endif; ?>
+                </a>
+            <?php endforeach; ?>
+        </div>
+    </div>
+<?php endif; ?>
